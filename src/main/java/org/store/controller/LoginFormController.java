@@ -10,11 +10,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.store.entity.User;
 import org.store.utill.CrudUtill;
 
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -25,22 +23,18 @@ public class LoginFormController {
     public JFXButton adminBtn;
     public JFXButton customerBtn;
     public AnchorPane loginFormContext;
-    int attemptsLogAdmin = 0;
-    int attemptsLogCustomer = 0;
+
     private CrudUtill CrudUtil;
 
     public void LogInAdminOnAction(ActionEvent actionEvent) {
         User user = getLogInUser();
         if (user!=null){
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/dash_bord_form.fxml"));
-                // fxmlLoader.setControllerFactory(controllerClass -> new DashBordFormController(user));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/dash_bord_form.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
-                // Get the current window
                 Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                // Close the previous window
                 currentStage.close();
                 stage.setResizable(false);
                 stage.show();
@@ -58,7 +52,7 @@ public class LoginFormController {
     public  User getLogInUser(){
         try {
             ResultSet rst= CrudUtil.execute("SELECT * FROM user\n" +
-                    "WHERE email = ? AND password = ? AND (user_type = 'admin' OR user_type = 'user');",txtEmail.getText(),txtPassword.getText());
+                    "WHERE email = ? AND password = ? AND (user_type = 'admin' OR user_type = 'user');",txtUserName.getText(),pwdPassword.getText());
             while (rst.next()){
 
             }

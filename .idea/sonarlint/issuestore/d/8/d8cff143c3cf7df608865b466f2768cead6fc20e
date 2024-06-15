@@ -1,19 +1,20 @@
 
-	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÓöÅ×2J$c61a2e7d-404c-4afa-9f10-28d5e875b190
+	java:S112<"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÓöÅ×2J$fdf89e06-6fa1-4f12-ad5e-98b7f238aba9
 Ÿ
-java:S1104"WMake txtUserName a static final constant or non-public and provide accessors if needed.(÷‹Ú’üÿÿÿÿ8ÕöÅ×2J$01bf6531-fd91-4763-94d8-2b2d168a0baa
+java:S1104"WMake txtUserName a static final constant or non-public and provide accessors if needed.(÷‹Ú’üÿÿÿÿ8ÕöÅ×2J$d9f748d0-2167-4ceb-985a-b52880a5e759
 Ÿ
-java:S1104"WMake pwdPassword a static final constant or non-public and provide accessors if needed.(İÈ¢âøÿÿÿÿ8ÕöÅ×2J$2cb3c1b5-c6af-4d95-80c2-d09b0f087cb6
+java:S1104"WMake pwdPassword a static final constant or non-public and provide accessors if needed.(İÈ¢âøÿÿÿÿ8ÕöÅ×2J$0b8128b2-57ea-49ac-a65c-220fc98294fe
 œ
-java:S1104"TMake adminBtn a static final constant or non-public and provide accessors if needed.(À•êûÿÿÿÿ8ÕöÅ×2J$865391a6-b3e3-478b-85f1-248c46618b6f
+java:S1104"TMake adminBtn a static final constant or non-public and provide accessors if needed.(À•êûÿÿÿÿ8ÕöÅ×2J$3ee44e14-8c0d-4a78-9f39-db338705f0b5
 š
-java:S1104"WMake customerBtn a static final constant or non-public and provide accessors if needed.(¾˜¥÷8ÕöÅ×2J$ef9dae52-5f15-4685-9629-af2b0138ce5e
+java:S1104"WMake customerBtn a static final constant or non-public and provide accessors if needed.(¾˜¥÷8ÕöÅ×2J$f4bfb05b-cb48-435a-b6df-1384c036459c
 Ÿ
-java:S1104"\Make loginFormContext a static final constant or non-public and provide accessors if needed.(§°Û’8ÕöÅ×2J$6b27ef18-238d-481a-8a83-fa646702ebc4
-š	java:S116"SRename this field "CrudUtil" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğĞÀñşÿÿÿÿ8Ü“â×2J$a8cbcf1d-479b-47aa-971e-eb365cb137ef
+java:S1104"\Make loginFormContext a static final constant or non-public and provide accessors if needed.(§°Û’8ÕöÅ×2J$958611a5-863d-4ffb-a701-f96bf0b75285
+š	java:S116"SRename this field "CrudUtil" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğĞÀñşÿÿÿÿ8Ü“â×2J$46694f9f-4b86-45f5-b578-c7b1c4e76a03
 Ä
-java:S1186H"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İŞÄ¹8ÜöÅ×2J$5b6844f4-6106-4a26-955b-552ad187d316
-•	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ò Èùÿÿÿÿ8ßöÅ×2J$cfa9423f-5063-467d-b7ae-7efa231a40f9
-ƒ	java:S125%"<This block of commented-out lines of code should be removed.(Ã„‚èúÿÿÿÿ8éöÅ×2J$d6c854e4-6c69-4965-baf9-8dc47b3e6632
-p	java:S108>")Either remove or fill this block of code.(Æíğóúÿÿÿÿ8ÿöÅ×2J$90592782-1238-46ee-a654-1929aec45865
-	java:S100H"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İŞÄ¹8€÷Å×2J$8aaf8633-9c4f-40e6-807a-36994505ada2
+java:S1186B"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İŞÄ¹8ÜöÅ×2J$9782406d-fb3c-466e-8ace-5a97ead3de0e
+•	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ò Èùÿÿÿÿ8ßöÅ×2J$54c3ac5a-eebe-464e-8888-33d00923d3cf
+}
+java:S22096"5Change this instance-reference to a static reference.(Ñ‰µøıÿÿÿÿ8¬æëØ2J$17b42f6f-84a9-4fd7-a549-37729d106d41
+p	java:S1088")Either remove or fill this block of code.(Æíğóúÿÿÿÿ8ÿöÅ×2J$cbafd642-ac7f-4036-b479-c0d10044afe3
+	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İŞÄ¹8€÷Å×2J$fcbb685e-99fd-44a4-83ea-a74008c6221a
