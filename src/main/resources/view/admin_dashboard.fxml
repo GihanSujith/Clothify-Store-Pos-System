@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="569.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.AdminDashboardController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#022546" height="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="764.0" />
+      <Label layoutX="249.0" layoutY="8.0" text="2024-03-05" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="382.0" layoutY="8.0" text="SUNDAY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="494.0" layoutY="8.0" text="4:20:30" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8b939a" height="55.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="764.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012343" height="472.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0" />
+      <Label layoutX="257.0" layoutY="60.0" text="Customers">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="601.0" layoutY="60.0" text="Log Out">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="60.0" text="Items">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="212.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/customer.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="45.0" layoutX="367.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/item.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="556.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/logout.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="3.0" layoutY="204.0" prefHeight="365.0" prefWidth="200.0">
+         <children>
+            <JFXButton alignment="BASELINE_RIGHT" prefHeight="88.0" prefWidth="200.0" styleClass="sidebarItem" stylesheets="@DarkTheme.css" text="DASH-BOARD" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_RIGHT" layoutX="5.0" layoutY="88.0" prefHeight="88.0" prefWidth="200.0" text="MANAGE CUSTOMERS" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_RIGHT" layoutX="5.0" layoutY="176.0" prefHeight="88.0" prefWidth="200.0" text="MANAGE ITEMS" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_RIGHT" layoutX="5.0" layoutY="264.0" prefHeight="101.0" prefWidth="200.0" text="INCOME" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="15.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/manage.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="13.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/manageitem.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="42.0" fitWidth="45.0" layoutX="16.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/income2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="12.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="55.0" fitWidth="70.0" layoutX="78.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/PROFILE.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="9.0" layoutY="152.0" text="Gihan Sujith Kumara" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="182.0" prefHeight="19.0" prefWidth="184.0" text="gihansujith943@gmail.com" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

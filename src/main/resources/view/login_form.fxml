@@ -2,15 +2,18 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="506.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.LoginFormController">
+<AnchorPane fx:id="loginFormContext" prefHeight="506.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.LoginFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#23303c" height="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="766.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212c36" height="45.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="766.0" />
@@ -35,10 +38,10 @@
             <Image url="@assests/clothify.png" />
          </image>
       </ImageView>
-      <JFXTextField layoutX="305.0" layoutY="254.0" prefHeight="25.0" prefWidth="267.0" promptText="User Name" />
-      <JFXTextField layoutX="305.0" layoutY="321.0" prefHeight="25.0" prefWidth="267.0" promptText="Password" />
-      <JFXButton layoutX="400.0" layoutY="377.0" prefHeight="25.0" prefWidth="123.0" style="-fx-background-radius: 3.0em; -fx-border-color: white; -fx-border-radius: 3.0em;" styleClass="adminNewBtn" stylesheets="@DarkTheme.css" text="LOG IN ADMIN" />
-      <JFXButton layoutX="399.0" layoutY="411.0" style="-fx-background-radius: 3.0em; -fx-border-radius: 3.0em; -fx-border-color: white;" styleClass="cashierBtn" stylesheets="@DarkTheme.css" text="LOG INn CUSTOMER" />
+      <JFXTextField fx:id="txtUserName" layoutX="305.0" layoutY="254.0" prefHeight="25.0" prefWidth="267.0" promptText="User Name" />
+      <JFXTextField fx:id="pwdPassword" layoutX="305.0" layoutY="321.0" prefHeight="25.0" prefWidth="267.0" promptText="Password" />
+      <JFXButton fx:id="adminBtn" layoutX="400.0" layoutY="377.0" onAction="#LogInAdminOnAction" prefHeight="27.0" prefWidth="136.0" style="-fx-background-radius: 3.0em; -fx-border-color: white; -fx-border-radius: 3.0em;" styleClass="adminNewBtn" stylesheets="@DarkTheme.css" text="LOG IN ADMIN" />
+      <JFXButton fx:id="customerBtn" layoutX="399.0" layoutY="411.0" onAction="#LogInCustomerOnAction" prefHeight="27.0" prefWidth="136.0" style="-fx-background-radius: 3.0em; -fx-border-radius: 3.0em; -fx-border-color: white;" styleClass="cashierBtn" stylesheets="@DarkTheme.css" text="LOG INn CUSTOMER" />
       <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="257.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assests/password.png" />
@@ -54,5 +57,26 @@
             <Image url="@assests/log.jpg" />
          </image>
       </ImageView>
+      <Label layoutX="432.0" layoutY="223.0" text="LOG IN">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.7535545023696683" startY="0.2037914691943128">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.13803605735301971" green="0.14473684132099152" blue="0.1382594257593155" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
    </children>
 </AnchorPane>

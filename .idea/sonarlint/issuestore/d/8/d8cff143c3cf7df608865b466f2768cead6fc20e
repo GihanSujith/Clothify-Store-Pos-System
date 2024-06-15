@@ -1,3 +1,19 @@
 
-…
-java:S2094"BRemove this empty class, write its code or make it an "interface".(áûŞ8¡Ğ‡£2J$912c8a34-e496-409a-b366-189a119d13f9
+	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÓöÅ×2J$c61a2e7d-404c-4afa-9f10-28d5e875b190
+Ÿ
+java:S1104"WMake txtUserName a static final constant or non-public and provide accessors if needed.(÷‹Ú’üÿÿÿÿ8ÕöÅ×2J$01bf6531-fd91-4763-94d8-2b2d168a0baa
+Ÿ
+java:S1104"WMake pwdPassword a static final constant or non-public and provide accessors if needed.(İÈ¢âøÿÿÿÿ8ÕöÅ×2J$2cb3c1b5-c6af-4d95-80c2-d09b0f087cb6
+œ
+java:S1104"TMake adminBtn a static final constant or non-public and provide accessors if needed.(À•êûÿÿÿÿ8ÕöÅ×2J$865391a6-b3e3-478b-85f1-248c46618b6f
+š
+java:S1104"WMake customerBtn a static final constant or non-public and provide accessors if needed.(¾˜¥÷8ÕöÅ×2J$ef9dae52-5f15-4685-9629-af2b0138ce5e
+Ÿ
+java:S1104"\Make loginFormContext a static final constant or non-public and provide accessors if needed.(§°Û’8ÕöÅ×2J$6b27ef18-238d-481a-8a83-fa646702ebc4
+š	java:S116"SRename this field "CrudUtil" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğĞÀñşÿÿÿÿ8Ü“â×2J$a8cbcf1d-479b-47aa-971e-eb365cb137ef
+Ä
+java:S1186H"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İŞÄ¹8ÜöÅ×2J$5b6844f4-6106-4a26-955b-552ad187d316
+•	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ò Èùÿÿÿÿ8ßöÅ×2J$cfa9423f-5063-467d-b7ae-7efa231a40f9
+ƒ	java:S125%"<This block of commented-out lines of code should be removed.(Ã„‚èúÿÿÿÿ8éöÅ×2J$d6c854e4-6c69-4965-baf9-8dc47b3e6632
+p	java:S108>")Either remove or fill this block of code.(Æíğóúÿÿÿÿ8ÿöÅ×2J$90592782-1238-46ee-a654-1929aec45865
+	java:S100H"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İŞÄ¹8€÷Å×2J$8aaf8633-9c4f-40e6-807a-36994505ada2
