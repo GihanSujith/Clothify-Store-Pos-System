@@ -1,5 +1,8 @@
-package org.store.controller;
+package org.store.controller.order;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXTextField;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -22,6 +25,18 @@ public class PlaceOrderFormController implements Initializable {
     public Label lblTime;
     public Label lblDate;
     public AnchorPane LoadFormContent;
+    public JFXComboBox cmbEmployerIDs;
+    public JFXTextField txtQtyFroCustomer;
+    public Label lblItemCode;
+    public Label lblOrderId;
+    public Label lblDiscount;
+    public Label lblPrice;
+    public Label lblQty;
+    public Label lblEmail;
+    public Label lblContact;
+    public Label lblName;
+    public Label lblNetTotal;
+    public JFXButton backBtnOnAction;
 
     public void backBtnOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = this.getClass().getResource("view/admin_dashboard.fxml");
@@ -37,6 +52,14 @@ public class PlaceOrderFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadDateAndTime();
+        loadCustomerIDs();
+        generateOrderId();
+    }
+
+    private void generateOrderId() {
+    }
+
+    private void loadCustomerIDs() {
     }
 
     private void loadDateAndTime() {
@@ -55,5 +78,17 @@ public class PlaceOrderFormController implements Initializable {
         time.setCycleCount(Animation.INDEFINITE);
         time.play();
 
+    }
+
+    public void btnPlaceOrderOnAction(ActionEvent actionEvent) {
+    }
+
+    public void txtAddtoCartOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnAddToCartOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnClearOnAction(ActionEvent actionEvent) {
     }
 }

@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="LoadFormContent" prefHeight="638.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.PlaceOrderFormController">
+<AnchorPane fx:id="LoadFormContent" prefHeight="638.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.order.PlaceOrderFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0a3054" height="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="912.0" />
       <Label fx:id="lblDate" layoutX="396.0" layoutY="8.0" text="yyyy-DD-mm" textFill="WHITE">
@@ -79,7 +79,7 @@
             <Image url="@assests/backgr.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" height="375.0" layoutX="221.0" layoutY="112.0" opacity="0.62" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="676.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="375.0" layoutX="211.0" layoutY="117.0" opacity="0.62" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="676.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="152.0" layoutX="206.0" layoutY="492.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="705.0" />
       <Label layoutX="88.0" layoutY="47.0" text="Place Order" textFill="WHITE">
          <font>
@@ -92,22 +92,22 @@
          </image>
       </ImageView>
       <JFXButton fx:id="backBtnOnAction" layoutX="822.0" layoutY="43.0" prefHeight="54.0" prefWidth="55.0" text="Button" />
-      <Label layoutX="238.0" layoutY="135.0" text="Employer*:" textFill="WHITE">
+      <Label layoutX="238.0" layoutY="135.0" text="Employer IDS* :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="238.0" layoutY="167.0" text="Customer Name :" textFill="WHITE">
+      <Label layoutX="238.0" layoutY="167.0" text="Employer Name :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="238.0" layoutY="204.0" text="Customer Contact :" textFill="WHITE">
+      <Label layoutX="238.0" layoutY="204.0" text="Employer Contact :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="238.0" layoutY="243.0" text="Customer Email :" textFill="WHITE">
+      <Label layoutX="238.0" layoutY="243.0" text="Employer Email :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -148,16 +148,7 @@
             <TableColumn prefWidth="93.0" text="Option" />
         </columns>
       </TableView>
-      <JFXComboBox layoutX="321.0" layoutY="123.0" />
-      <JFXTextField layoutX="384.0" layoutY="123.0" prefHeight="25.0" prefWidth="106.0" unFocusColor="WHITE" />
-      <JFXTextField layoutX="355.0" layoutY="155.0" prefHeight="25.0" prefWidth="134.0" unFocusColor="WHITE" />
-      <JFXTextField layoutX="355.0" layoutY="192.0" prefHeight="25.0" prefWidth="134.0" unFocusColor="WHITE" />
-      <JFXTextField layoutX="352.0" layoutY="231.0" prefHeight="25.0" prefWidth="134.0" unFocusColor="WHITE" />
-      <JFXTextField layoutX="583.0" layoutY="123.0" prefHeight="25.0" prefWidth="103.0" unFocusColor="WHITE" />
-      <JFXTextField layoutX="585.0" layoutY="155.0" prefHeight="25.0" prefWidth="103.0" unFocusColor="WHITE" />
-      <JFXTextField layoutX="585.0" layoutY="192.0" prefHeight="25.0" prefWidth="106.0" unFocusColor="WHITE" />
-      <JFXTextField layoutX="769.0" layoutY="123.0" prefHeight="25.0" prefWidth="106.0" unFocusColor="WHITE" />
-      <JFXTextField layoutX="769.0" layoutY="155.0" prefHeight="25.0" prefWidth="106.0" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cmbEmployerIDs" focusColor="#ff0011" layoutX="351.0" layoutY="123.0" prefHeight="25.0" prefWidth="134.0" unFocusColor="WHITE" />
       <Label layoutX="276.0" layoutY="529.0" text="Total :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
@@ -168,7 +159,7 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="344.0" layoutY="529.0" text="00000.00" textFill="RED">
+      <Label fx:id="lblNetTotal" layoutX="344.0" layoutY="529.0" text="00000.00" textFill="RED">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -198,9 +189,60 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <JFXButton layoutX="802.0" layoutY="566.0" styleClass="adminNewBtn" stylesheets="@DarkTheme.css" text="Place Order" textFill="WHITE">
+      <JFXButton layoutX="802.0" layoutY="566.0" onAction="#btnPlaceOrderOnAction" styleClass="adminNewBtn" stylesheets="@DarkTheme.css" text="Place Order" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblName" layoutX="367.0" layoutY="167.0" text="Saman" textFill="#ffb700">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblContact" layoutX="367.0" layoutY="204.0" text="0769761122" textFill="#ffb700">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmail" layoutX="367.0" layoutY="243.0" text="sugith@gmail.com" textFill="#ffd400">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblQty" layoutX="590.0" layoutY="135.0" text="5" textFill="#ffb700">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPrice" layoutX="590.0" layoutY="167.0" text="500.00" textFill="#ffb700">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDiscount" layoutX="590.0" layoutY="204.0" text="5%" textFill="#ffb700">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOrderId" layoutX="781.0" layoutY="135.0" text="C0001" textFill="#ffb700">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemCode" layoutX="785.0" layoutY="167.0" text="#AB02" textFill="#ffb700">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtQtyFroCustomer" focusColor="WHITE" layoutX="495.0" layoutY="231.0" onAction="#txtAddtoCartOnAction" promptText="QTY" unFocusColor="WHITE" />
+      <JFXButton layoutX="656.0" layoutY="232.0" onAction="#btnAddToCartOnAction" styleClass="adminBtn" stylesheets="@DarkTheme.css" text="Add to cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="749.0" layoutY="231.0" onAction="#btnClearOnAction" prefHeight="24.0" prefWidth="70.0" styleClass="buttonAdd" stylesheets="@DarkTheme.css" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
          </font>
       </JFXButton>
    </children>
