@@ -18,39 +18,25 @@ import java.time.LocalTime;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-public class AdminDashboardController implements Initializable {
-    public AnchorPane LoadFormContent;
-    public Label lblDate;
+public class PlaceOrderFormController implements Initializable {
     public Label lblTime;
+    public Label lblDate;
+    public AnchorPane LoadFormContent;
 
-
-
-    public void btnOrderOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = this.getClass().getResource("/view/place_order_form.fxml");
+    public void backBtnOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = this.getClass().getResource("view/admin_dashboard.fxml");
 
         assert resource != null;
 
         Parent load = (Parent) FXMLLoader.load(resource);
         this.LoadFormContent.getChildren().clear();
         this.LoadFormContent.getChildren().add(load);
-    }
 
-    public void btnItemOnAction(ActionEvent actionEvent) {
-    }
-
-    public void btnOrderDetailsOnAction(ActionEvent actionEvent) {
-    }
-
-    public void btnEmployeeOnAction(ActionEvent actionEvent) {
-    }
-
-    public void btnSupplierOnAction(ActionEvent actionEvent) {
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadDateAndTime();
-
     }
 
     private void loadDateAndTime() {
@@ -70,7 +56,4 @@ public class AdminDashboardController implements Initializable {
         time.play();
 
     }
-
-
 }
-

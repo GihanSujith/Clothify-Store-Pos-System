@@ -1,111 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="569.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.AdminDashboardController">
+<AnchorPane fx:id="LoadFormContent" prefHeight="638.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.AdminDashboardController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#022546" height="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="764.0" />
-      <Label layoutX="249.0" layoutY="8.0" text="2024-03-05" textFill="WHITE">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0a3054" height="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="912.0" />
+      <Label fx:id="lblDate" layoutX="396.0" layoutY="8.0" text="yyyy-DD-mm" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="382.0" layoutY="8.0" text="SUNDAY" textFill="WHITE">
+      <Label fx:id="lblTime" layoutX="549.0" layoutY="8.0" text="00.00.00" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="494.0" layoutY="8.0" text="4:20:30" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8b939a" height="55.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="764.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012343" height="472.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0" />
-      <Label layoutX="257.0" layoutY="60.0" text="Customers">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="601.0" layoutY="60.0" text="Log Out">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="412.0" layoutY="60.0" text="Items">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="45.0" fitWidth="53.0" layoutX="212.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@assests/customer.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="55.0" fitWidth="45.0" layoutX="367.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@assests/item.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="556.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8b939a" height="55.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="912.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012343" height="558.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0" />
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="751.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assests/logout.jpeg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="3.0" layoutY="204.0" prefHeight="365.0" prefWidth="200.0">
+      <AnchorPane layoutX="3.0" layoutY="204.0" prefHeight="448.0" prefWidth="208.0">
          <children>
-            <JFXButton alignment="BASELINE_RIGHT" prefHeight="88.0" prefWidth="200.0" styleClass="sidebarItem" stylesheets="@DarkTheme.css" text="DASH-BOARD" textFill="WHITE">
+            <JFXButton alignment="BASELINE_RIGHT" onAction="#btnOrderOnAction" prefHeight="88.0" prefWidth="200.0" styleClass="sidebarItem" stylesheets="@DarkTheme.css" text="ORDER" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="BASELINE_RIGHT" layoutX="5.0" layoutY="88.0" prefHeight="88.0" prefWidth="200.0" text="MANAGE CUSTOMERS" textFill="WHITE">
+            <JFXButton alignment="BASELINE_RIGHT" layoutX="5.0" layoutY="88.0" onAction="#btnItemOnAction" prefHeight="88.0" prefWidth="200.0" text="ITEMS" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="BASELINE_RIGHT" layoutX="5.0" layoutY="176.0" prefHeight="88.0" prefWidth="200.0" text="MANAGE ITEMS" textFill="WHITE">
+            <JFXButton alignment="BASELINE_RIGHT" layoutX="5.0" layoutY="176.0" onAction="#btnOrderDetailsOnAction" prefHeight="88.0" prefWidth="200.0" text="ORDER DETAILS" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="BASELINE_RIGHT" layoutX="5.0" layoutY="264.0" prefHeight="101.0" prefWidth="200.0" text="INCOME" textFill="WHITE">
+            <JFXButton alignment="BASELINE_RIGHT" layoutX="5.0" layoutY="264.0" onAction="#btnEmployeeOnAction" prefHeight="88.0" prefWidth="200.0" text="EMPLOYEE" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
             <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="15.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assests/manage.jpg" />
+                  <Image url="@assests/ICON.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="13.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="39.0" fitWidth="42.0" layoutX="15.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assests/manageitem.png" />
+                  <Image url="@assests/item.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="42.0" fitWidth="45.0" layoutX="16.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assests/income2.png" />
+                  <Image url="@assests/customer.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="12.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="39.0" fitWidth="42.0" layoutX="15.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assests/home.png" />
+                  <Image url="@assests/ORDER.png" />
+               </image>
+            </ImageView>
+            <JFXButton alignment="BASELINE_RIGHT" layoutX="8.0" layoutY="352.0" onAction="#btnSupplierOnAction" prefHeight="88.0" prefWidth="200.0" text="SUPPLIER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="15.0" layoutY="378.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/SUPPLIER.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
       <ImageView fitHeight="55.0" fitWidth="70.0" layoutX="78.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@assests/PROFILE.png" />
+            <Image url="@assests/o.png" />
          </image>
       </ImageView>
       <Label layoutX="9.0" layoutY="152.0" text="Gihan Sujith Kumara" textFill="WHITE">
@@ -118,5 +101,37 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
+      <JFXButton alignment="BASELINE_RIGHT" layoutX="719.0" layoutY="47.0" prefHeight="45.0" prefWidth="154.0" text="Log Out">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" blendMode="SCREEN" fill="#615353" height="39.0" layoutX="349.0" layoutY="2.0" opacity="0.49" stroke="BLACK" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="343.0" />
+      <Separator layoutX="517.0" layoutY="4.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="4.0" />
+      <ImageView fitHeight="547.0" fitWidth="705.0" layoutX="207.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/backgr.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="211.0" layoutX="221.0" layoutY="259.0" opacity="0.62" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="676.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="163.0" layoutX="206.0" layoutY="492.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="705.0" />
+      <BarChart layoutX="251.0" layoutY="489.0" prefHeight="163.0" prefWidth="589.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label layoutX="88.0" layoutY="47.0" text="Clothify Store" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="14.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/clothify.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

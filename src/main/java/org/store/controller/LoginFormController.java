@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import org.store.entity.User;
 import org.store.utill.CrudUtill;
 
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -23,14 +24,14 @@ public class LoginFormController {
     public JFXButton adminBtn;
     public JFXButton customerBtn;
     public AnchorPane loginFormContext;
-
     private CrudUtill CrudUtil;
+
 
     public void LogInAdminOnAction(ActionEvent actionEvent) {
         User user = getLogInUser();
         if (user!=null){
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/dash_bord_form.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/admin_dashboard.fxml"));
                 Parent root1 = (Parent) fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root1));
