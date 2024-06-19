@@ -101,7 +101,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <JFXButton alignment="BASELINE_RIGHT" layoutX="719.0" layoutY="47.0" prefHeight="45.0" prefWidth="154.0" text="Log Out">
+      <JFXButton fx:id="btnLogOut" alignment="BASELINE_RIGHT" layoutX="719.0" layoutY="47.0" onAction="#logOutOnAction" prefHeight="45.0" prefWidth="154.0" text="Log Out">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

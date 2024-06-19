@@ -13,8 +13,6 @@ p
 ,src/main/java/org/store/utill/CrudUtill.java,4\3\4368acab67484852be9688d4cb592ade8eafc735
 X
 (src/main/java/org/store/entity/User.java,d\8\d8ff079fc78a13a5119c3bdbbcc7d98822e144b4
-p
-@src/main/java/org/store/controller/PlaceOrderFormController.java,1\8\18f76347efc689ae107e7b5a103d18dd2e37f823
 Y
 )src/main/java/org/store/entity/Order.java,a\6\a6e53898d40d9b8962d2603677e01d1e195b1f7e
 v
@@ -35,3 +33,11 @@ Y
 )src/main/java/org/store/dto/OrderDto.java,7\a\7af279e7cd70ce38a49ec83d2a8b7ed59592ffc8
 ^
 .src/main/java/org/store/dto/tm/EmployeeTM.java,7\5\7583c5c5375760cfd74b9f6748267d742f50bbfc
+z
+Jsrc/main/java/org/store/controller/employee/AddEmployeeFormController.java,1\6\16283a5c0a0ed3cdd64fff865467639fffe6e287
+s
+Csrc/main/java/org/store/controller/employee/EmployeeController.java,9\1\919d73005541d0fa401252f1a71ca5ed7ed18eb3
+p
+@src/main/java/org/store/controller/employee/EmployeeService.java,5\5\5545a45761c4b84f004eb862da704657e59e17ac
+z
+Jsrc/main/java/org/store/controller/EmployeeRegistrationFormController.java,f\5\f582074259d97411c47f0b0cc7534cf086f43d4c

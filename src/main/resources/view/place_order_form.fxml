@@ -91,7 +91,7 @@
             <Image url="@assests/clothify.png" />
          </image>
       </ImageView>
-      <JFXButton fx:id="backBtnOnAction" layoutX="822.0" layoutY="43.0" prefHeight="54.0" prefWidth="55.0" text="Button" />
+      <JFXButton layoutX="822.0" layoutY="43.0" onAction="#backBtnOnAction" prefHeight="54.0" prefWidth="55.0" text="Button" />
       <Label layoutX="238.0" layoutY="135.0" text="Employer IDS* :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
