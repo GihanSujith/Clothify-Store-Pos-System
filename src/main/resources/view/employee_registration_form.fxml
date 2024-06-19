@@ -13,7 +13,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.EmployeeRegistrationFormController">
    <children>
       <AnchorPane fx:id="LoadFormContent" layoutX="10.0" layoutY="10.0" prefHeight="638.0" prefWidth="912.0">
@@ -31,7 +30,7 @@
             </Label>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8b939a" height="55.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="912.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012343" height="558.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0" />
-            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="814.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="799.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assests/back2.jpeg" />
                </image>
@@ -76,7 +75,10 @@
                   <Image url="@assests/clothify.png" />
                </image>
             </ImageView>
-            <JFXButton layoutX="815.0" layoutY="47.0" onAction="#backBtnOnAction" prefHeight="45.0" prefWidth="44.0" />
+            <JFXButton alignment="BASELINE_RIGHT" layoutX="795.0" layoutY="47.0" onAction="#backBtnOnAction" prefHeight="45.0" prefWidth="100.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
             <Label layoutX="241.0" layoutY="133.0" text="Employer ID :" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />

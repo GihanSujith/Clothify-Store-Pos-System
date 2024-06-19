@@ -29,7 +29,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012343" height="558.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0" />
       <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="751.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@assests/logout.jpeg" />
+            <Image url="@assests/shutdown.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="3.0" layoutY="204.0" prefHeight="448.0" prefWidth="208.0">
@@ -101,7 +101,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnLogOut" alignment="BASELINE_RIGHT" layoutX="719.0" layoutY="47.0" onAction="#logOutOnAction" prefHeight="45.0" prefWidth="154.0" text="Log Out">
+      <JFXButton fx:id="btnLogOut" alignment="BASELINE_RIGHT" layoutX="728.0" layoutY="47.0" onAction="#logOutOnAction" prefHeight="45.0" prefWidth="154.0" text="Shut Down">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -113,7 +113,7 @@
             <Image url="@assests/backgr.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" height="211.0" layoutX="221.0" layoutY="259.0" opacity="0.62" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="676.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="345.0" layoutX="221.0" layoutY="125.0" opacity="0.62" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="676.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="163.0" layoutX="206.0" layoutY="492.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="705.0" />
       <BarChart layoutX="251.0" layoutY="489.0" prefHeight="163.0" prefWidth="589.0">
         <xAxis>
