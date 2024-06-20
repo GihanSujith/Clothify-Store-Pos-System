@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="666.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.OrderDetailsController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane fx:id="LoadFormContent" layoutX="10.0" layoutY="10.0" prefHeight="638.0" prefWidth="912.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0a3054" height="66.0" layoutX="-20.0" layoutY="-24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="932.0" />
+                  <Label fx:id="lblDate" layoutX="396.0" layoutY="8.0" text="yyyy-DD-mm" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="549.0" layoutY="8.0" text="00.00.00" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8b939a" height="55.0" layoutX="-20.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="932.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012343" height="547.0" layoutX="-20.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="226.0" />
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="808.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assests/back2.jpeg" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="3.0" layoutY="204.0" prefHeight="441.0" prefWidth="208.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assests/image01.jpeg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-10.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assests/cl2.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-10.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assests/cl3.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <ImageView fitHeight="55.0" fitWidth="70.0" layoutX="78.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assests/o.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="9.0" layoutY="152.0" text="Gihan Sujith Kumara" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="182.0" prefHeight="19.0" prefWidth="184.0" text="gihansujith943@gmail.com" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="25.0" arcWidth="25.0" blendMode="SCREEN" fill="#615353" height="45.0" layoutX="349.0" layoutY="-4.0" opacity="0.49" stroke="BLACK" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="343.0" />
+                  <Separator layoutX="517.0" layoutY="4.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="4.0" />
+                  <ImageView fitHeight="547.0" fitWidth="705.0" layoutX="207.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assests/backgr.jpg" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" height="356.0" layoutX="221.0" layoutY="117.0" opacity="0.62" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="676.0" />
+                  <Label layoutX="88.0" layoutY="47.0" text="Order Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="14.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assests/clothify.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton alignment="BASELINE_RIGHT" layoutX="799.0" layoutY="42.0" onAction="#backBtnOnAction" prefHeight="54.0" prefWidth="105.0" text="Back">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <TableView layoutX="228.0" layoutY="214.0" prefHeight="237.0" prefWidth="664.0" stylesheets="@DarkTheme.css">
+                     <columns>
+                        <TableColumn prefWidth="67.0" text="Order ID" />
+                        <TableColumn prefWidth="78.0" text="Date" />
+                        <TableColumn prefWidth="60.0" text="Total" />
+                        <TableColumn prefWidth="101.0" text="Employee Name" />
+                        <TableColumn prefWidth="76.0" text="Contact" />
+                        <TableColumn prefWidth="104.0" text="Email" />
+                        <TableColumn prefWidth="79.0" text="Employee" />
+                        <TableColumn prefWidth="98.0" text="Address" />
+                     </columns>
+                  </TableView>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#062354" height="155.0" layoutX="206.0" layoutY="491.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="705.0" />
+                  <TableView layoutX="229.0" layoutY="491.0" prefHeight="155.0" prefWidth="664.0" stylesheets="@DarkTheme.css">
+                     <columns>
+                        <TableColumn prefWidth="67.0" text="Item Code" />
+                        <TableColumn prefWidth="78.0" text="Description" />
+                        <TableColumn prefWidth="60.0" text="Qty" />
+                        <TableColumn prefWidth="78.0" text="Unit Price" />
+                        <TableColumn prefWidth="78.0" text="Date" />
+                        <TableColumn prefWidth="83.0" text="Discount" />
+                        <TableColumn prefWidth="68.0" text="Type" />
+                        <TableColumn prefWidth="81.0" text="Size" />
+                        <TableColumn prefWidth="70.0" text="Amount" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="243.0" layoutY="142.0" text="Order ID :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="591.0" layoutY="142.0" text="Item Code :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox focusColor="RED" layoutX="331.0" layoutY="130.0" prefHeight="25.0" prefWidth="170.0" unFocusColor="WHITE" />
+                  <JFXComboBox focusColor="RED" layoutX="692.0" layoutY="130.0" prefHeight="25.0" prefWidth="170.0" unFocusColor="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
