@@ -1,20 +1,19 @@
 
-	java:S112="FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8—÷Ø2J$aa5b3f60-f5b6-4c8c-8be5-a58f94a3362e
+	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÖŞÒŸƒ2J$1baf5202-4128-4216-9a25-7ec5559bd499
 Ÿ
-java:S1104"WMake txtUserName a static final constant or non-public and provide accessors if needed.(÷‹Ú’üÿÿÿÿ8Ÿ—÷Ø2J$8d1ccd8d-db3f-4f22-b468-b0933c3919a4
-Ÿ
-java:S1104"WMake pwdPassword a static final constant or non-public and provide accessors if needed.(İÈ¢âøÿÿÿÿ8 —÷Ø2J$cf4abb5e-cc86-49ac-8050-fa903e83f999
+java:S1104"\Make loginFormContext a static final constant or non-public and provide accessors if needed.(§°Û’8×ŞÒŸƒ2J$fe86be31-008d-4011-9338-c3a1b517d8c6
 œ
-java:S1104"TMake adminBtn a static final constant or non-public and provide accessors if needed.(À•êûÿÿÿÿ8 —÷Ø2J$adc70cef-872b-4b9f-b343-25b4c4672d27
-š
-java:S1104"WMake customerBtn a static final constant or non-public and provide accessors if needed.(¾˜¥÷8 —÷Ø2J$65ed01d4-95ad-4cc0-b125-57fbeafa3198
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8×ŞÒŸƒ2J$845a3b8d-efe2-4f51-85e1-88e7cf293980
 Ÿ
-java:S1104"\Make loginFormContext a static final constant or non-public and provide accessors if needed.(§°Û’8 —÷Ø2J$3cc90a29-028a-4602-956e-6c164ba67906
-š	java:S116"SRename this field "CrudUtil" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğĞÀñşÿÿÿÿ8ŞØùØ2J$1ddad1ee-ee60-400f-866e-6cbc498f2cad
-Ä
-java:S1186C"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(İŞÄ¹8­—÷Ø2J$6b583fd8-463a-4290-824b-856cb1d7de8d
-•	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ò Èùÿÿÿÿ8¯—÷Ø2J$6c6685b2-c904-4804-8dfb-a8aa576f3fa0
+java:S1104"WMake txtPassword a static final constant or non-public and provide accessors if needed.(¬ä©Óÿÿÿÿÿ8×ŞÒŸƒ2J$d9a7e5f4-835a-46a5-ae79-086fc30a4168
+Œ
+java:S2583"DChange this condition so that it does not always evaluate to "false"(¤¦ß‘üÿÿÿÿ8ÙşÓŸƒ2J$9f616d17-fbdc-4ffa-9ff2-ba740db3cdb2
+š	java:S116"SRename this field "CrudUtil" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğĞÀñşÿÿÿÿ8õŞÒŸƒ2J$a617aa8c-9b31-4d6b-91dd-548a1d0c68fc
+
+java:S18544"7Remove this useless assignment to local variable "rst".(Ñ‰µøıÿÿÿÿ8íşÓŸƒ2J$8c0f7627-986d-41a0-a28d-397449f97fe8
 }
-java:S22097"5Change this instance-reference to a static reference.(Ñ‰µøıÿÿÿÿ8òØùØ2J$a12c5947-5a09-4a01-9667-f482191aaf55
-p	java:S1089")Either remove or fill this block of code.(Æíğóúÿÿÿÿ8È—÷Ø2J$c831c268-51a6-49c6-ba84-880daebbf19e
-	java:S100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İŞÄ¹8É—÷Ø2J$05cf0173-791d-4561-b4fe-87ddfb0d92f9
+java:S22094"5Change this instance-reference to a static reference.(Ñ‰µøıÿÿÿÿ8ˆßÒŸƒ2J$19b8ab24-abda-4dbd-8e60-f5f16a234244
+p
+java:S14814"(Remove this unused "rst" local variable.(Ñ‰µøıÿÿÿÿ8ğşÓŸƒ2J$9f21c95c-e044-461f-8244-55dee726d0c2
+
+java:S1128"7Remove this unused import 'org.mindrot.jbcrypt.BCrypt'.(‡êÑ“ıÿÿÿÿ8ŠßÒŸƒ2J$c9572628-5046-463c-9326-669707d959e9

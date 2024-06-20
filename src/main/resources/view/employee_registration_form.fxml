@@ -35,7 +35,29 @@
                   <Image url="@assests/back2.jpeg" />
                </image>
             </ImageView>
-            <AnchorPane layoutX="3.0" layoutY="204.0" prefHeight="448.0" prefWidth="208.0" />
+            <AnchorPane layoutX="3.0" layoutY="204.0" prefHeight="448.0" prefWidth="206.0">
+               <children>
+                  <ImageView fitHeight="132.0" fitWidth="200.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assests/back.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="132.0" fitWidth="200.0" layoutX="3.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assests/back.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="132.0" fitWidth="200.0" layoutX="3.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assests/back.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="132.0" fitWidth="200.0" layoutX="2.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assests/back.jpg" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
             <ImageView fitHeight="55.0" fitWidth="70.0" layoutX="78.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assests/o.png" />

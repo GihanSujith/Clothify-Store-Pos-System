@@ -6,77 +6,66 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="loginFormContext" prefHeight="506.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.LoginFormController">
+<AnchorPane fx:id="loginFormContext" prefHeight="542.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.LoginFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#23303c" height="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="766.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#212c36" height="45.0" layoutY="461.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="766.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c8894" height="417.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
-      <Text fill="WHITE" layoutX="6.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello,Welcome !" wrappingWidth="200.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c8894" height="542.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="356.0" />
+      <Text layoutX="368.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello,Welcome !" wrappingWidth="200.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="28.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clothify Store">
+      <Text layoutX="48.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clothify Store">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="40.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="3.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Better service for a Your Choice">
+      <Text layoutX="356.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@2024 Gihan-Sujith" wrappingWidth="122.62779998779297">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <ImageView fitHeight="121.0" fitWidth="152.0" layoutX="395.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="121.0" fitWidth="152.0" layoutX="508.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assests/clothify.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtUserName" layoutX="305.0" layoutY="254.0" prefHeight="25.0" prefWidth="267.0" promptText="User Name" />
-      <JFXTextField fx:id="pwdPassword" layoutX="305.0" layoutY="321.0" prefHeight="25.0" prefWidth="267.0" promptText="Password" />
-      <JFXButton fx:id="adminBtn" layoutX="400.0" layoutY="377.0" onAction="#LogInAdminOnAction" prefHeight="27.0" prefWidth="136.0" style="-fx-background-radius: 3.0em; -fx-border-color: white; -fx-border-radius: 3.0em;" styleClass="adminNewBtn" stylesheets="@DarkTheme.css" text="LOG IN ADMIN" />
-      <JFXButton fx:id="customerBtn" layoutX="399.0" layoutY="411.0" onAction="#LogInCustomerOnAction" prefHeight="27.0" prefWidth="136.0" style="-fx-background-radius: 3.0em; -fx-border-radius: 3.0em; -fx-border-color: white;" styleClass="cashierBtn" stylesheets="@DarkTheme.css" text="LOG INn CUSTOMER" />
-      <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="257.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@assests/password.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="45.0" fitWidth="41.0" layoutX="257.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@assests/user.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="80.0" fitWidth="94.0" layoutX="416.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+      <JFXTextField fx:id="txtEmail" focusColor="BLACK" layoutX="435.0" layoutY="247.0" prefHeight="25.0" prefWidth="267.0" promptText="Email" />
+      <JFXTextField fx:id="txtPassword" focusColor="BLACK" layoutX="435.0" layoutY="322.0" prefHeight="25.0" prefWidth="267.0" promptText="Password" />
+      <JFXButton layoutX="500.0" layoutY="387.0" onAction="#btnLoginOnAction" prefHeight="41.0" prefWidth="136.0" style="-fx-background-radius: 3.0em; -fx-border-color: white; -fx-border-radius: 3.0em; -fx-background-color: #050505;" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXButton>
+      <ImageView fitHeight="80.0" fitWidth="94.0" layoutX="529.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assests/log.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="432.0" layoutY="223.0" text="LOG IN">
+      <Label layoutX="544.0" layoutY="212.0" text="LOG IN">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0" startX="0.7535545023696683" startY="0.2037914691943128">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.13803605735301971" green="0.14473684132099152" blue="0.1382594257593155" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="1.0" green="1.0" blue="1.0" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
       </Label>
+      <ImageView fitHeight="56.0" fitWidth="61.0" layoutX="374.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/email.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="374.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/pass.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="542.0" fitWidth="356.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/shop.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle height="32.0" layoutX="356.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="448.0" />
+      <Rectangle height="518.0" layoutX="775.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="29.0" />
+      <Rectangle height="32.0" layoutX="356.0" layoutY="516.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="422.0" />
    </children>
 </AnchorPane>

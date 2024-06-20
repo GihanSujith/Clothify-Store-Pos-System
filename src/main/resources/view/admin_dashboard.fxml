@@ -86,12 +86,12 @@
             </JFXButton>
             <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="15.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assests/employee2.jpg" />
+                  <Image url="@assests/emp.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="16.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@assests/customer2.jpg" />
+                  <Image url="@assests/cust.jpg" />
                </image>
             </ImageView>
          </children>
@@ -111,7 +111,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnLogOut" alignment="BASELINE_RIGHT" layoutX="728.0" layoutY="47.0" onAction="#logOutOnAction" prefHeight="45.0" prefWidth="154.0" text="Shut Down">
+      <JFXButton alignment="BASELINE_RIGHT" layoutX="728.0" layoutY="47.0" onAction="#btnShutDownOnAction" prefHeight="45.0" prefWidth="154.0" text="Shut Down">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -125,7 +125,7 @@
       </ImageView>
       <Rectangle arcHeight="50.0" arcWidth="50.0" height="345.0" layoutX="221.0" layoutY="125.0" opacity="0.62" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="676.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="163.0" layoutX="206.0" layoutY="492.0" opacity="0.88" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="705.0" />
-      <BarChart layoutX="251.0" layoutY="489.0" prefHeight="163.0" prefWidth="589.0">
+      <BarChart layoutX="209.0" layoutY="489.0" prefHeight="163.0" prefWidth="694.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
@@ -141,6 +141,16 @@
       <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="14.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assests/clothify.png" />
+         </image>
+      </ImageView>
+      <JFXButton alignment="BASELINE_RIGHT" layoutX="586.0" layoutY="47.0" onAction="#logOutBtnOnAction" prefHeight="45.0" prefWidth="139.0" text="Log Out">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="45.0" fitWidth="55.0" layoutX="601.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/logout.jpeg" />
          </image>
       </ImageView>
    </children>

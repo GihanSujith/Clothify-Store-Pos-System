@@ -7,9 +7,12 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -23,7 +26,7 @@ public class AdminDashboardController implements Initializable {
     public AnchorPane LoadFormContent;
     public Label lblDate;
     public Label lblTime;
-    public JFXButton btnLogOut;
+
 
 
     public void btnOrderOnAction(ActionEvent actionEvent) throws IOException {
@@ -102,12 +105,27 @@ public class AdminDashboardController implements Initializable {
 
     }
 
-    
 
-    public void logOutOnAction(ActionEvent actionEvent) {
+
+    public void btnShutDownOnAction(ActionEvent actionEvent) {
         System.exit(0);
     }
 
+    public void logOutBtnOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/login_form.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+            // Get the current window
+            Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            // Close the previous window
+            currentStage.close();
+            stage.show();
 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
 
