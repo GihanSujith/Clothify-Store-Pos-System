@@ -13,7 +13,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.AddItemsFormController">
    <children>
       <AnchorPane fx:id="LoadFormContent" layoutX="10.0" layoutY="10.0" prefHeight="638.0" prefWidth="912.0">
@@ -175,6 +174,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
+            <Separator layoutX="631.0" layoutY="140.0" orientation="VERTICAL" prefHeight="285.0" prefWidth="6.0" />
          </children>
       </AnchorPane>
    </children>

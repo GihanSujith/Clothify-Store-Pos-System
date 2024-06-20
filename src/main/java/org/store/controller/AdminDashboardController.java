@@ -79,6 +79,13 @@ public class AdminDashboardController implements Initializable {
         this.LoadFormContent.getChildren().add(load);
     }
     public void btnCustomerOnAction(ActionEvent actionEvent) throws IOException{
+        URL resource = this.getClass().getResource("/view/add_customer_form.fxml");
+
+        assert resource != null;
+
+        Parent load = (Parent) FXMLLoader.load(resource);
+        this.LoadFormContent.getChildren().clear();
+        this.LoadFormContent.getChildren().add(load);
     }
 
     @Override
