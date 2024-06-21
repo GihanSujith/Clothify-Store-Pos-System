@@ -1,24 +1,28 @@
 
-	java:S112H"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8½ËÎƒ2J$906ce71c-ab42-4961-bb05-afa4c94768bb
+	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8½ËÎƒ2J$fbefe9cf-7bfb-4354-a86f-953eee67c9ba
 Ÿ
-java:S1104"\Make loginFormContext a static final constant or non-public and provide accessors if needed.(§°Û’8àŸÅÎƒ2J$58cd4229-d1f4-4694-ae8d-1583f80ba771
+java:S1104"\Make loginFormContext a static final constant or non-public and provide accessors if needed.(§°Û’8àŸÅÎƒ2J$c5464df1-dd47-45c0-a28a-81b58eb3dc9f
 Ÿ
-java:S1104!"WMake loginButton a static final constant or non-public and provide accessors if needed.(øò­Éúÿÿÿÿ8àŸÅÎƒ2J$9d544fa7-495c-419f-a9d9-a45797929655
+java:S1104$"WMake loginButton a static final constant or non-public and provide accessors if needed.(øò­Éúÿÿÿÿ8àŸÅÎƒ2J$6ac0e36f-237b-49d6-93f8-168e9590eb18
 
-java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(²üÓ…ùÿÿÿÿ8Ø¥ÔÎƒ2J$b60ec427-5a16-4485-a109-36f9844d1da9
+java:S2095O"GUse try-with-resources or close this "Statement" in a "finally" clause.(²üÓ…ùÿÿÿÿ8Ñ’†Ğƒ2J$7cfea315-c94c-44d0-a3f7-8c27b7f71530
 É
-java:S1186b"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿ8Ù¥ÔÎƒ2J$4db0b2b2-032e-49e2-b699-1e9ce5fddc29
+java:S1186a"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿ8Ù¥ÔÎƒ2J$579faf82-f053-4627-bef1-0b87377e264d
 z
-java:S11724"2Remove this unused method parameter "actionEvent".(Ùõášşÿÿÿÿ8– ÅÎƒ2J$8779922e-b6f9-4ec4-944f-786fd586f35b
+java:S1172."2Remove this unused method parameter "actionEvent".(Ùõášşÿÿÿÿ8– ÅÎƒ2J$466883f7-2c3f-4909-9652-94e99775c61c
 o
-java:S11255"'Remove the unnecessary boolean literal.(¤ßÁ¶øÿÿÿÿ8– ÅÎƒ2J$f6736ef3-ea0b-43ce-ad80-a8fe269b5e12
+java:S1125/"'Remove the unnecessary boolean literal.(¤ßÁ¶øÿÿÿÿ8– ÅÎƒ2J$00a35ff8-970e-49b3-8a43-477b26e5142c
 o
-java:S11255"'Remove the unnecessary boolean literal.(¤ßÁ¶øÿÿÿÿ8— ÅÎƒ2J$e87f4c5a-69da-4ff6-8970-dd01923bfc69
+java:S1125/"'Remove the unnecessary boolean literal.(¤ßÁ¶øÿÿÿÿ8— ÅÎƒ2J$c72c6a95-6290-425d-8b77-cd9583cf7d84
 u
-java:S1172>"2Remove this unused method parameter "actionEvent".(Æç»¿8— ÅÎƒ2J$5b411d5c-b540-4ed7-a826-ecdb812baec7
+java:S11728"2Remove this unused method parameter "actionEvent".(­ùİò8— ÅÎƒ2J$d1a0a0f4-3417-469a-91d4-7dbc21062ff2
 €
-java:S1128	"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8á¥ÔÎƒ2J$4a2295ee-e786-4837-8584-39c555d64a95
+java:S1128"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8Û’†Ğƒ2J$635b98cf-74f7-44a9-87dc-6d8b83f26204
 x
-java:S1128"5Remove this unused import 'javafx.scene.image.Image'.(‰¿½Ç8á¥ÔÎƒ2J$2d5ea3d4-f2d5-4245-bad5-265e182826cd
+java:S1128"5Remove this unused import 'javafx.scene.image.Image'.(‰¿½Ç8Û’†Ğƒ2J$56d73dc4-b9a4-4947-9cbd-dda7d920ff54
+
+java:S1128"9Remove this unused import 'javafx.scene.image.ImageView'.(áÿ®Ãüÿÿÿÿ8Û’†Ğƒ2J$1a3f7706-97f1-421b-8598-96e072260117
+w
+java:S1128"/Remove this unused import 'javafx.stage.Stage'.(æÄ¸²úÿÿÿÿ8Ü’†Ğƒ2J$23455cd2-e888-46d1-832f-d34ec5d05c97
 l
-java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8á¥ÔÎƒ2J$c03c54ea-1e17-4af5-8bc8-20d207d12041
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8Ü’†Ğƒ2J$afd375bc-bc85-4a27-9c90-a03d5143e246

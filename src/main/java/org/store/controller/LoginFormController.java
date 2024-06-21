@@ -5,7 +5,9 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -15,6 +17,7 @@ import javafx.stage.Stage;
 import org.store.db.DBConnection;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -31,16 +34,7 @@ public class LoginFormController implements Initializable {
     private JFXTextField txtEmail;
 
     public JFXButton loginButton;
-    @FXML
-    private ImageView loginImageView;
-    @FXML
-    private ImageView clothifyImageView;
-    @FXML
-    private ImageView emailImageView;
-    @FXML
-    private ImageView brandingImageView;
-    @FXML
-    private ImageView passwordImageView;
+
     @FXML
     private JFXButton canselButton;
     @FXML
@@ -59,9 +53,14 @@ public class LoginFormController implements Initializable {
 
 
 
-    public void btnCanselOnAction(ActionEvent actionEvent) {
-        Stage stage = (Stage) canselButton.getScene().getWindow();
-        stage.close();
+    public void btnCanselOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = this.getClass().getResource("/view/user_register_form.fxml");
+
+        assert resource != null;
+
+        Parent load = (Parent) FXMLLoader.load(resource);
+        this.loginFormContext.getChildren().clear();
+        this.loginFormContext.getChildren().add(load);
     }
 
     public void validateLogin(){

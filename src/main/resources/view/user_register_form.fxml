@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="LoadFormContent" prefHeight="550.0" prefWidth="807.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.UserRegisterFormController">
+   <children>
+      <ImageView fitHeight="470.0" fitWidth="491.0" layoutX="316.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/backgr.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="470.0" fitWidth="491.0" layoutX="316.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/backgr.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#545d65" height="550.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="316.0" />
+      <ImageView fitHeight="550.0" fitWidth="316.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/shop.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="514.0" layoutX="362.0" layoutY="21.0" opacity="0.77" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="430.0" />
+      <ImageView fitHeight="81.0" fitWidth="100.0" layoutX="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/clothify.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="48.0" layoutY="81.0" text="User Registration" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="391.0" layoutY="41.0" text="First Name :" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="391.0" layoutY="107.0" text="Last Name :" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="391.0" layoutY="182.0" text="User Name :" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="395.0" layoutY="261.0" text="Password :" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="390.0" layoutY="339.0" text="Confirm Password :" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField focusColor="RED" layoutX="391.0" layoutY="69.0" prefHeight="25.0" prefWidth="316.0" promptText="first name" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="RED" layoutX="391.0" layoutY="134.0" prefHeight="25.0" prefWidth="316.0" promptText="last name" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="RED" layoutX="391.0" layoutY="209.0" prefHeight="25.0" prefWidth="316.0" promptText="user name" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="RED" layoutX="396.0" layoutY="288.0" prefHeight="25.0" prefWidth="316.0" promptText="password" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField focusColor="RED" layoutX="396.0" layoutY="366.0" prefHeight="25.0" prefWidth="316.0" promptText="confirm password" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="589.0" layoutY="432.0" prefHeight="25.0" prefWidth="172.0" style="-fx-border-radius: 3.0em; -fx-background-radius: 3.0em;" styleClass="cashierBtn" stylesheets="@DarkTheme.css" text="Register" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="589.0" layoutY="471.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-radius: 3.0em; -fx-border-radius: 3.0em;" styleClass="cashierBtn" stylesheets="@DarkTheme.css" text="Close" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
