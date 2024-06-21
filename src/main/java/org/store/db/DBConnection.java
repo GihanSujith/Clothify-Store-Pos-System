@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBConnection {
     private static DBConnection instance;
     private Connection connection;
-    private DBConnection() throws SQLException, ClassNotFoundException {
+    public DBConnection() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/clothfystore","root","gihan123");
     }

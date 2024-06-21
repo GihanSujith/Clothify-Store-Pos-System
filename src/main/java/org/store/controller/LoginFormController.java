@@ -1,60 +1,101 @@
 package org.store.controller;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import org.mindrot.jbcrypt.BCrypt;
-import org.store.entity.User;
-import org.store.utill.CrudUtill;
+import org.store.db.DBConnection;
 
+import java.io.File;
+import java.net.URL;
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ResourceBundle;
 
 
-public class LoginFormController {
+public class LoginFormController implements Initializable {
     public AnchorPane loginFormContext;
-    public JFXTextField txtEmail;
-    public JFXTextField txtPassword;
-    private CrudUtill CrudUtil;
+    @FXML
+    private JFXPasswordField pwdPassword;
+    @FXML
+    private JFXTextField txtEmail;
+
+    public JFXButton loginButton;
+    @FXML
+    private ImageView loginImageView;
+    @FXML
+    private ImageView clothifyImageView;
+    @FXML
+    private ImageView emailImageView;
+    @FXML
+    private ImageView brandingImageView;
+    @FXML
+    private ImageView passwordImageView;
+    @FXML
+    private JFXButton canselButton;
+    @FXML
+    private Label lblLoginMessage;
+
+
 
 
     public void btnLoginOnAction(ActionEvent actionEvent) {
-        User user = getLogInUser();
-        if (user!=null){
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/admin_dashboard.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                // Get the current window
-                Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                // Close the previous window
-                currentStage.close();
-                stage.setResizable(false);
-                stage.show();
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }else {
-            new Alert(Alert.AlertType.ERROR, "Your Password or Email incorrect try again!").show();
+        if (txtEmail.getText().isBlank() == false && pwdPassword.getText().isBlank() == false){
+            validateLogin();
+        }else{
+            lblLoginMessage.setText("Please enter email and password");
         }
     }
 
-    private User getLogInUser() {
-        try {
-            ResultSet rst= CrudUtil.execute("SELECT * FROM user\n" +
-                    "WHERE email = ? AND password = ? AND (user_type = 'admin' OR user_type = 'user');",txtEmail.getText(),txtPassword.getText());
 
+
+    public void btnCanselOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) canselButton.getScene().getWindow();
+        stage.close();
+    }
+
+    public void validateLogin(){
+        DBConnection connectNow = null;
+        try {
+            connectNow = new DBConnection();
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        return null;
+        Connection connectDB = connectNow.getConnection();
+
+        String verifyLogin = "SELECT count(1) FROM UserAccount WHERE username = '" + txtEmail.getText() + "' AND password ='" + pwdPassword.getText() + "'";
+
+        try{
+
+            Statement statement = connectDB.createStatement();
+            ResultSet queryResult = statement.executeQuery(verifyLogin);
+
+            while (queryResult.next()){
+                if(queryResult.getInt(1) == 1){
+                    lblLoginMessage.setText("Congratulations!");
+                }else{
+                    lblLoginMessage.setText("Invalid login. Please try again.");
+                }
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
+
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
+}

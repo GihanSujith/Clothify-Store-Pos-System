@@ -23,15 +23,7 @@ public class SupplierFormController implements Initializable {
     public Label lblDate;
     public Label lblTime;
 
-    public void backBtnOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = this.getClass().getResource("/view/admin_dashboard.fxml");
 
-        assert resource != null;
-
-        Parent load = FXMLLoader.load(resource);
-        this.LoadFormContent.getChildren().clear();
-        this.LoadFormContent.getChildren().add(load);
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -53,5 +45,15 @@ public class SupplierFormController implements Initializable {
         );
         time.setCycleCount(Animation.INDEFINITE);
         time.play();
+    }
+
+    public void backBtnOnAction(ActionEvent actionEvent) throws IOException{
+        URL resource = this.getClass().getResource("/view/admin_dashboard.fxml");
+
+        assert resource != null;
+
+        Parent load = FXMLLoader.load(resource);
+        this.LoadFormContent.getChildren().clear();
+        this.LoadFormContent.getChildren().add(load);
     }
 }

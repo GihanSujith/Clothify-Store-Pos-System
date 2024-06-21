@@ -1,19 +1,24 @@
 
-	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÖÞÒŸƒ2J$1baf5202-4128-4216-9a25-7ec5559bd499
+	java:S112H"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8½ËÎƒ2J$906ce71c-ab42-4961-bb05-afa4c94768bb
 Ÿ
-java:S1104"\Make loginFormContext a static final constant or non-public and provide accessors if needed.(§°Û’8×ÞÒŸƒ2J$fe86be31-008d-4011-9338-c3a1b517d8c6
-œ
-java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8×ÞÒŸƒ2J$845a3b8d-efe2-4f51-85e1-88e7cf293980
+java:S1104"\Make loginFormContext a static final constant or non-public and provide accessors if needed.(§°Û’8àŸÅÎƒ2J$58cd4229-d1f4-4694-ae8d-1583f80ba771
 Ÿ
-java:S1104"WMake txtPassword a static final constant or non-public and provide accessors if needed.(¬ä©Óÿÿÿÿÿ8×ÞÒŸƒ2J$d9a7e5f4-835a-46a5-ae79-086fc30a4168
-Œ
-java:S2583"DChange this condition so that it does not always evaluate to "false"(¤¦ß‘üÿÿÿÿ8ÙþÓŸƒ2J$9f616d17-fbdc-4ffa-9ff2-ba740db3cdb2
-š	java:S116"SRename this field "CrudUtil" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ðÐÀñþÿÿÿÿ8õÞÒŸƒ2J$a617aa8c-9b31-4d6b-91dd-548a1d0c68fc
-
-java:S18544"7Remove this useless assignment to local variable "rst".(Ñ‰µøýÿÿÿÿ8íþÓŸƒ2J$8c0f7627-986d-41a0-a28d-397449f97fe8
-}
-java:S22094"5Change this instance-reference to a static reference.(Ñ‰µøýÿÿÿÿ8ˆßÒŸƒ2J$19b8ab24-abda-4dbd-8e60-f5f16a234244
-p
-java:S14814"(Remove this unused "rst" local variable.(Ñ‰µøýÿÿÿÿ8ðþÓŸƒ2J$9f21c95c-e044-461f-8244-55dee726d0c2
-
-java:S1128"7Remove this unused import 'org.mindrot.jbcrypt.BCrypt'.(‡êÑ“ýÿÿÿÿ8ŠßÒŸƒ2J$c9572628-5046-463c-9326-669707d959e9
+java:S1104!"WMake loginButton a static final constant or non-public and provide accessors if needed.(øò­Éúÿÿÿÿ8àŸÅÎƒ2J$9d544fa7-495c-419f-a9d9-a45797929655
+
+java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(²üÓ…ùÿÿÿÿ8Ø¥ÔÎƒ2J$b60ec427-5a16-4485-a109-36f9844d1da9
+É
+java:S1186b"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘ÝŸüÿÿÿÿ8Ù¥ÔÎƒ2J$4db0b2b2-032e-49e2-b699-1e9ce5fddc29
+z
+java:S11724"2Remove this unused method parameter "actionEvent".(Ùõášþÿÿÿÿ8– ÅÎƒ2J$8779922e-b6f9-4ec4-944f-786fd586f35b
+o
+java:S11255"'Remove the unnecessary boolean literal.(¤ßÁ¶øÿÿÿÿ8– ÅÎƒ2J$f6736ef3-ea0b-43ce-ad80-a8fe269b5e12
+o
+java:S11255"'Remove the unnecessary boolean literal.(¤ßÁ¶øÿÿÿÿ8— ÅÎƒ2J$e87f4c5a-69da-4ff6-8970-dd01923bfc69
+u
+java:S1172>"2Remove this unused method parameter "actionEvent".(Æç»¿8— ÅÎƒ2J$5b411d5c-b540-4ed7-a826-ecdb812baec7
+€
+java:S1128	"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8á¥ÔÎƒ2J$4a2295ee-e786-4837-8584-39c555d64a95
+x
+java:S1128"5Remove this unused import 'javafx.scene.image.Image'.(‰¿½Ç8á¥ÔÎƒ2J$2d5ea3d4-f2d5-4245-bad5-265e182826cd
+l
+java:S1128")Remove this unused import 'java.io.File'.(†Ð¥Å8á¥ÔÎƒ2J$c03c54ea-1e17-4af5-8bc8-20d207d12041
