@@ -49,3 +49,7 @@ n
 >src/main/java/org/store/controller/SupplierFormController.java,c\2\c2666c81af2241912d55f883825880f96a46d11b
 q
 Asrc/main/java/org/store/controller/AddCustomerFormController.java,7\d\7d0f3e886d788ea798e621d381912f234f5ad557
+\
+,src/main/java/org/store/dto/CustomerDto.java,9\0\9048aa4f586e33f25e170d0efe1daf4c37c84aec
+^
+.src/main/java/org/store/dto/tm/CustomerTM.java,7\c\7c45356510f8c4f77440ed7f602fe0d92bce1631

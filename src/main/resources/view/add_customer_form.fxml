@@ -14,24 +14,24 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.AddCustomerFormController">
+<AnchorPane prefHeight="675.0" prefWidth="1196.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.AddCustomerFormController">
    <children>
-      <AnchorPane fx:id="LoadFormContent" layoutX="20.0" layoutY="20.0" prefHeight="638.0" prefWidth="912.0">
+      <AnchorPane fx:id="LoadFormContent" layoutX="20.0" layoutY="20.0" prefHeight="655.0" prefWidth="1165.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0a3054" height="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="912.0" />
-            <Label fx:id="lblDate" layoutX="396.0" layoutY="8.0" text="yyyy-DD-mm" textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0a3054" height="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1165.0" />
+            <Label fx:id="lblDate" layoutX="536.0" layoutY="8.0" text="yyyy-DD-mm" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lblTime" layoutX="549.0" layoutY="8.0" text="00.00.00" textFill="WHITE">
+            <Label fx:id="lblTime" layoutX="696.0" layoutY="8.0" text="00.00.00" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8b939a" height="55.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="912.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8b939a" height="55.0" layoutY="42.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1165.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#012343" height="558.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0" />
-            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="799.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="1057.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assests/back2.jpeg" />
                </image>
@@ -80,9 +80,9 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <Rectangle arcHeight="25.0" arcWidth="25.0" blendMode="SCREEN" fill="#615353" height="39.0" layoutX="349.0" layoutY="2.0" opacity="0.49" stroke="BLACK" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="343.0" />
-            <Separator layoutX="517.0" layoutY="4.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="4.0" />
-            <ImageView fitHeight="547.0" fitWidth="705.0" layoutX="207.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+            <Rectangle arcHeight="25.0" arcWidth="25.0" blendMode="SCREEN" fill="#615353" height="39.0" layoutX="478.0" layoutY="2.0" opacity="0.49" stroke="BLACK" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="343.0" />
+            <Separator layoutX="668.0" layoutY="4.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="4.0" />
+            <ImageView fitHeight="395.0" fitWidth="728.0" layoutX="207.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assests/backgr.jpg" />
                </image>
@@ -99,7 +99,7 @@
                   <Image url="@assests/clothify.png" />
                </image>
             </ImageView>
-            <JFXButton alignment="BASELINE_RIGHT" layoutX="795.0" layoutY="47.0" onAction="#backBtnOnAction" prefHeight="45.0" prefWidth="100.0" text="Back">
+            <JFXButton alignment="BASELINE_RIGHT" layoutX="1052.0" layoutY="47.0" onAction="#backBtnOnAction" prefHeight="45.0" prefWidth="100.0" text="Back">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -149,88 +149,104 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <TableView layoutX="205.0" layoutY="480.0" prefHeight="175.0" prefWidth="705.0" stylesheets="@DarkTheme.css">
+            <TableView fx:id="tblCustomer" layoutX="205.0" layoutY="480.0" prefHeight="175.0" prefWidth="961.0" stylesheets="@DarkTheme.css">
                <columns>
-                  <TableColumn prefWidth="57.0" text="ID" />
-                  <TableColumn prefWidth="73.0" text="Title" />
-                  <TableColumn prefWidth="75.0" text="Name" />
-                  <TableColumn prefWidth="57.0" text="DOB" />
-                  <TableColumn prefWidth="58.0" text="NIC" />
-                  <TableColumn prefWidth="63.0" text="Address" />
-                  <TableColumn prefWidth="68.0" text="Email" />
-                  <TableColumn prefWidth="73.0" text="Contact No" />
-                  <TableColumn prefWidth="86.0" text="Bank Name" />
-                  <TableColumn prefWidth="94.0" text="Bank Acc No" />
+                  <TableColumn fx:id="colCustomerId" prefWidth="57.0" text="ID" />
+                  <TableColumn fx:id="colCustomerTitle" prefWidth="55.0" text="Title" />
+                  <TableColumn fx:id="colCustomerName" prefWidth="101.0" text="Name" />
+                  <TableColumn fx:id="colDob" prefWidth="83.0" text="DOB" />
+                  <TableColumn fx:id="colNic" prefWidth="105.0" text="NIC" />
+                  <TableColumn fx:id="colAddress" prefWidth="146.0" text="Address" />
+                  <TableColumn fx:id="colEmail" prefWidth="125.0" text="Email" />
+                  <TableColumn fx:id="colContactNo" prefWidth="101.0" text="Contact No" />
+                  <TableColumn fx:id="colBankName" prefWidth="81.0" text="Bank Name" />
+                  <TableColumn fx:id="colBankAccountNo" prefWidth="105.0" text="Bank Acc No" />
                </columns>
             </TableView>
-            <JFXTextField focusColor="RED" layoutX="396.0" layoutY="121.0" prefHeight="22.0" prefWidth="208.0" promptText="id" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtCustomerID" focusColor="RED" layoutX="396.0" layoutY="121.0" prefHeight="22.0" prefWidth="208.0" promptText="id" unFocusColor="WHITE">
                <font>
-                  <Font name="Bell MT" size="12.0" />
+                  <Font name="Bell MT Bold" size="13.0" />
                </font>
             </JFXTextField>
-            <JFXTextField focusColor="RED" layoutX="396.0" layoutY="193.0" prefHeight="22.0" prefWidth="206.0" promptText="name" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtName" focusColor="RED" layoutX="396.0" layoutY="193.0" prefHeight="22.0" prefWidth="206.0" promptText="name" unFocusColor="WHITE">
                <font>
-                  <Font name="Bell MT" size="12.0" />
+                  <Font name="Bell MT Bold" size="13.0" />
                </font>
             </JFXTextField>
-            <JFXTextField focusColor="RED" layoutX="396.0" layoutY="274.0" prefHeight="22.0" prefWidth="206.0" promptText="nic" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtNic" focusColor="RED" layoutX="396.0" layoutY="274.0" prefHeight="22.0" prefWidth="206.0" promptText="nic" unFocusColor="WHITE">
                <font>
-                  <Font name="Bell MT" size="12.0" />
+                  <Font name="Bell MT Bold" size="13.0" />
                </font>
             </JFXTextField>
-            <JFXTextField focusColor="RED" layoutX="397.0" layoutY="306.0" prefHeight="22.0" prefWidth="206.0" promptText="address" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtAddress" focusColor="RED" layoutX="397.0" layoutY="306.0" prefHeight="22.0" prefWidth="206.0" promptText="address" unFocusColor="WHITE">
                <font>
-                  <Font name="Bell MT" size="12.0" />
+                  <Font name="Bell MT Bold" size="13.0" />
                </font>
             </JFXTextField>
-            <JFXTextField focusColor="RED" layoutX="396.0" layoutY="335.0" prefHeight="22.0" prefWidth="206.0" promptText="email" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtEmail" focusColor="RED" layoutX="396.0" layoutY="335.0" prefHeight="22.0" prefWidth="206.0" promptText="email" unFocusColor="WHITE">
                <font>
-                  <Font name="Bell MT" size="12.0" />
+                  <Font name="Bell MT Bold" size="13.0" />
                </font>
             </JFXTextField>
-            <JFXTextField focusColor="RED" layoutX="396.0" layoutY="373.0" prefHeight="22.0" prefWidth="206.0" promptText="contact no" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtContactNo" focusColor="RED" layoutX="396.0" layoutY="373.0" prefHeight="22.0" prefWidth="206.0" promptText="contact no" unFocusColor="WHITE">
                <font>
-                  <Font name="Bell MT" size="12.0" />
+                  <Font name="Bell MT Bold" size="13.0" />
                </font>
             </JFXTextField>
-            <JFXTextField focusColor="RED" layoutX="396.0" layoutY="408.0" prefHeight="22.0" prefWidth="206.0" promptText="bank name" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtbankName" focusColor="RED" layoutX="396.0" layoutY="408.0" prefHeight="22.0" prefWidth="206.0" promptText="bank name" unFocusColor="WHITE">
                <font>
-                  <Font name="Bell MT" size="12.0" />
+                  <Font name="Bell MT Bold" size="13.0" />
                </font>
             </JFXTextField>
-            <DatePicker layoutX="396.0" layoutY="239.0" prefHeight="25.0" prefWidth="206.0" promptText="date of birth" />
-            <JFXButton layoutX="671.0" layoutY="322.0" prefHeight="27.0" prefWidth="172.0" styleClass="buttonUpdate" stylesheets="@DarkTheme.css" text="Update" textFill="WHITE">
+            <DatePicker fx:id="dateDob" layoutX="396.0" layoutY="239.0" prefHeight="25.0" prefWidth="206.0" promptText="date of birth" />
+            <JFXButton layoutX="671.0" layoutY="322.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="172.0" styleClass="buttonUpdate" stylesheets="@DarkTheme.css" text="Update" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="671.0" layoutY="188.0" prefHeight="27.0" prefWidth="172.0" styleClass="adminBtn" stylesheets="@DarkTheme.css" text="Add Customer" textFill="WHITE">
+            <JFXButton layoutX="671.0" layoutY="188.0" onAction="#btnAddCustomerOnAction" prefHeight="27.0" prefWidth="172.0" styleClass="adminBtn" stylesheets="@DarkTheme.css" text="Add Customer" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="671.0" layoutY="251.0" prefHeight="27.0" prefWidth="172.0" styleClass="buttonDelete" stylesheets="@DarkTheme.css" text="Delete" textFill="WHITE">
+            <JFXButton layoutX="671.0" layoutY="251.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="172.0" styleClass="buttonDelete" stylesheets="@DarkTheme.css" text="Delete" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="671.0" layoutY="395.0" prefHeight="27.0" prefWidth="172.0" styleClass="buttonAdd" stylesheets="@DarkTheme.css" text="Clear" textFill="WHITE">
+            <JFXButton layoutX="671.0" layoutY="395.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="172.0" styleClass="buttonAdd" stylesheets="@DarkTheme.css" text="Clear" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <Separator layoutX="629.0" layoutY="147.0" orientation="VERTICAL" prefHeight="316.0" prefWidth="6.0" />
-            <JFXComboBox focusColor="RED" layoutX="396.0" layoutY="155.0" prefHeight="25.0" prefWidth="208.0" promptText="title" unFocusColor="WHITE" />
+            <Separator layoutX="629.0" layoutY="182.0" orientation="VERTICAL" prefHeight="281.0" prefWidth="6.0" />
+            <JFXComboBox fx:id="cmbTitle" focusColor="RED" layoutX="396.0" layoutY="155.0" prefHeight="25.0" prefWidth="208.0" promptText="title" unFocusColor="WHITE" />
             <Label layoutX="241.0" layoutY="453.0" text="Bank Account No :" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="RED" layoutX="397.0" layoutY="442.0" prefHeight="22.0" prefWidth="206.0" promptText="bank account no" unFocusColor="WHITE">
+            <JFXTextField fx:id="txtBankAccountNo" focusColor="RED" layoutX="397.0" layoutY="442.0" prefHeight="22.0" prefWidth="206.0" promptText="bank account no" unFocusColor="WHITE">
                <font>
-                  <Font name="Bell MT" size="12.0" />
+                  <Font name="Bell MT Bold" size="13.0" />
                </font>
             </JFXTextField>
+            <ImageView fitHeight="385.0" fitWidth="251.0" layoutX="913.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/shop.jpg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="54.0" layoutX="913.0" layoutY="428.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="251.0" />
+            <Label layoutX="990.0" layoutY="438.0" text="View Table" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="668.0" layoutY="136.0" onAction="#btnSearchOnAction" prefHeight="27.0" prefWidth="172.0" styleClass="buttonDBlue" stylesheets="@DarkTheme.css" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
          </children>
       </AnchorPane>
    </children>
