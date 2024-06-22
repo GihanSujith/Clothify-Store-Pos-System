@@ -8,12 +8,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.store.db.DBConnection;
 
 import java.io.File;
@@ -54,13 +56,8 @@ public class LoginFormController implements Initializable {
 
 
     public void btnCanselOnAction(ActionEvent actionEvent) throws IOException {
-        URL resource = this.getClass().getResource("/view/user_register_form.fxml");
-
-        assert resource != null;
-
-        Parent load = (Parent) FXMLLoader.load(resource);
-        this.loginFormContext.getChildren().clear();
-        this.loginFormContext.getChildren().add(load);
+       Stage stage = (Stage) canselButton.getScene().getWindow();
+       stage.close();
     }
 
     public void validateLogin(){
@@ -81,7 +78,8 @@ public class LoginFormController implements Initializable {
 
             while (queryResult.next()){
                 if(queryResult.getInt(1) == 1){
-                    lblLoginMessage.setText("Congratulations!");
+                    //lblLoginMessage.setText("Congratulations!");
+                    createAccountForm();
                 }else{
                     lblLoginMessage.setText("Invalid login. Please try again.");
                 }
@@ -91,6 +89,21 @@ public class LoginFormController implements Initializable {
             e.getCause();
         }
 
+    }
+
+    public void createAccountForm(){
+        try{
+
+            Parent root = FXMLLoader.load(getClass().getResource("/view/user_register_form.fxml"));
+            Stage registerStage = new Stage();
+            registerStage.initStyle(StageStyle.UNDECORATED);
+            registerStage.setScene(new Scene(root,800,550));
+            registerStage.show();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
     }
 
     @Override
