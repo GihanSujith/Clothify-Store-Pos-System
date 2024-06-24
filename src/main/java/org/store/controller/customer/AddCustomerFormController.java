@@ -219,41 +219,16 @@ public class AddCustomerFormController implements Initializable {
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
-        try {
-            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-            Connection connection = DBConnection.getInstance().getConnection();
-            ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM customer WHERE CustId='"+txtCustomerID.getText()+"'" );
-            while (resultSet.next()){
-                CustomerDto customerDto = new CustomerDto(
-                        resultSet.getString(1),
-                        resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getDate(4),
-                        resultSet.getString(5),
-                        resultSet.getString(6),
-                        resultSet.getString(7),
-                        resultSet.getDouble(8),
-                        resultSet.getString(9),
-                        resultSet.getString(10)
-                );
+        CustomerDto customerDto = CustomerController.getInstance().searchCustomer(txtCustomerID.getText());
+        cmbTitle.setValue(customerDto.getTitle());
+        txtName.setText(customerDto.getName());
+        txtNic.setText(customerDto.getNic());
+        txtAddress.setText(customerDto.getAddress());
+        txtEmail.setText(customerDto.getEmail());
+        txtContactNo.setText(String.valueOf(customerDto.getContactNo()));
+        txtbankName.setText(customerDto.getBankName());
+        txtBankAccountNo.setText(String.valueOf(customerDto.getBankAccountNo()));
 
-
-
-
-                cmbTitle.setValue(customerDto.getTitle());
-                txtName.setText(customerDto.getName());
-                txtNic.setText(customerDto.getNic());
-                txtAddress.setText(customerDto.getAddress());
-                txtEmail.setText(customerDto.getEmail());
-                txtContactNo.setText(String.valueOf(customerDto.getContactNo()));
-                txtbankName.setText(customerDto.getBankName());
-                txtBankAccountNo.setText(customerDto.getBankAccountNo());
-
-            }
-
-        } catch (ClassNotFoundException | SQLException  e) {
-            throw new RuntimeException(e);
-        }
     }
 
     private void clearText(){

@@ -3,29 +3,44 @@ package org.store.controller.order;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import com.sun.jdi.connect.spi.Connection;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import org.store.controller.customer.CustomerController;
+import org.store.controller.item.ItemController;
+import org.store.db.DBConnection;
 import org.store.dto.CustomerDto;
+import org.store.dto.ItemDto;
 import org.store.entity.Employee;
 
+import java.beans.Statement;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static org.store.db.DBConnection.*;
 
 public class PlaceOrderFormController implements Initializable {
     public Label lblTime;
@@ -33,19 +48,30 @@ public class PlaceOrderFormController implements Initializable {
     public AnchorPane LoadFormContent;
     
     public JFXTextField txtQtyFroCustomer;
-    public Label lblItemCode;
+
     public Label lblOrderId;
-    public Label lblDiscount;
-    public Label lblPrice;
+
     public Label lblQty;
     public Label lblEmail;
     public Label lblContact;
     public Label lblName;
     public Label lblNetTotal;
-    public Label lblItemCode1;
-    public Label lblEmail1;
-    public JFXComboBox cmbItemCodes;
+
     public JFXComboBox cmbCustomerIDs;
+    public JFXComboBox cmbItemCode;
+    public Label lblDescription;
+    public Label lblSize;
+    public Label lblType;
+    public Label lblSellingPrice;
+    public TableColumn colItemCode;
+    public TableColumn colQty;
+    public TableColumn colUnitPrice;
+    public TableColumn colType;
+    public TableColumn colAmount;
+    public TableColumn colDate;
+    public TableColumn colDesc;
+    public TableColumn colSize;
+    public TableView tblCart;
 
     public void backBtnOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = this.getClass().getResource("view/admin_dashboard.fxml");
@@ -64,9 +90,50 @@ public class PlaceOrderFormController implements Initializable {
         loadDateAndTime();
         loadCustomerIDs();
         generateOrderId();
+        loadItemCodes();
+
+        cmbCustomerIDs.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> {
+            setCustomerFroLbl((String) newValue);
+        });
+
+        cmbItemCode.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> {
+            setItemDataFroLbl((String)newValue);
+        });
     }
 
+    private void setItemDataFroLbl(String itemCode) {
+        ItemDto itemDto = ItemController.getInstance().searchItem(itemCode);
+        lblSellingPrice.setText(String.valueOf(itemDto.getSellingPrice()));
+        lblType.setText(itemDto.getType());
+        lblDescription.setText(itemDto.getDescription());
+        lblQty.setText(String.valueOf(itemDto.getQuantity()));
+        lblSize.setText(itemDto.getSize());
+
+    }
+
+    private void setCustomerFroLbl(String customerId) {
+        CustomerDto customerDto = CustomerController.getInstance().searchCustomer(customerId);
+        lblName.setText(customerDto.getName());
+        lblContact.setText(String.valueOf(customerDto.getContactNo()));
+        lblEmail.setText(customerDto.getEmail());
+    }
+
+
+    private void loadItemCodes(){
+        ObservableList<ItemDto> allItems = ItemController.getInstance().loadItems();
+
+        ObservableList<String> itemCodes=FXCollections.observableArrayList();
+
+        allItems.forEach(itemDto -> {
+            itemCodes.add(itemDto.getItemCode());
+        });
+        cmbItemCode.setItems(itemCodes);
+
+    }
+
+
     private void generateOrderId() {
+
     }
 
     private void loadCustomerIDs() {
@@ -109,4 +176,6 @@ public class PlaceOrderFormController implements Initializable {
 
     public void btnClearOnAction(ActionEvent actionEvent) {
     }
+
+
 }

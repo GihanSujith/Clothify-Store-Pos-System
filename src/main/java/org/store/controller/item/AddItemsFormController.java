@@ -1,4 +1,4 @@
-package org.store.controller;
+package org.store.controller.item;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;

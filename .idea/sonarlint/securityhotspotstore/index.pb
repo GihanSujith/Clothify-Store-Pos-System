@@ -59,3 +59,7 @@ s
 Csrc/main/java/org/store/controller/customer/CustomerController.java,1\d\1d4b2ce8c22fbc38dcffab8cc687e853387cf0a6
 z
 Jsrc/main/java/org/store/controller/customer/AddCustomerFormController.java,b\0\b0ce926a78682773e3e3525196fc1bbfdc20e52f
+k
+;src/main/java/org/store/controller/item/ItemController.java,3\8\382a45bab31bf129dec11b8fcb9e7e08a9550259
+s
+Csrc/main/java/org/store/controller/item/AddItemsFormController.java,e\d\eded2f4970f56e32cf7bcc761f765d4cd286bafe

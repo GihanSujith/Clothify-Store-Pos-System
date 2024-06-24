@@ -100,17 +100,17 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="238.0" layoutY="167.0" text="Employer Name :" textFill="WHITE">
+      <Label layoutX="238.0" layoutY="167.0" text="Customer Name :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="238.0" layoutY="204.0" text="Employer Contact :" textFill="WHITE">
+      <Label layoutX="238.0" layoutY="204.0" text="Customer Contact :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="238.0" layoutY="243.0" text="Employer Email :" textFill="WHITE">
+      <Label layoutX="238.0" layoutY="243.0" text="Customer Email :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -120,7 +120,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="693.0" layoutY="167.0" text="Qty*:" textFill="WHITE">
+      <Label layoutX="693.0" layoutY="167.0" text="Qty On Hand*:" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -130,7 +130,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="497.0" layoutY="204.0" text="Discount :" textFill="WHITE">
+      <Label layoutX="497.0" layoutY="204.0" text="Type* :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -140,15 +140,16 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TableView layoutX="235.0" layoutY="305.0" prefHeight="186.0" prefWidth="643.0" stylesheets="@DarkTheme.css">
+      <TableView fx:id="tblCart" layoutX="235.0" layoutY="305.0" prefHeight="186.0" prefWidth="643.0" stylesheets="@DarkTheme.css">
         <columns>
-          <TableColumn prefWidth="75.0" text="Qty" />
-          <TableColumn prefWidth="130.0" text="Item Code" />
-            <TableColumn prefWidth="89.0" text="Unit Price" />
-            <TableColumn prefWidth="69.0" text="Date" />
-            <TableColumn prefWidth="94.0" text="Amount" />
-            <TableColumn prefWidth="92.0" text="Discount%" />
-            <TableColumn prefWidth="93.0" text="Option" />
+          <TableColumn fx:id="colItemCode" prefWidth="75.0" text="Item Code" />
+          <TableColumn fx:id="colQty" prefWidth="58.0" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="72.0" text="Unit Price" />
+            <TableColumn fx:id="colType" prefWidth="79.0" text="Type" />
+            <TableColumn fx:id="colAmount" prefWidth="79.0" text="Amount" />
+            <TableColumn fx:id="colDate" prefWidth="96.0" text="Date" />
+            <TableColumn fx:id="colDesc" prefWidth="134.0" text="Description" />
+            <TableColumn fx:id="colSize" prefWidth="49.0" text="Size" />
         </columns>
       </TableView>
       <JFXComboBox fx:id="cmbCustomerIDs" focusColor="#ff0011" layoutX="351.0" layoutY="123.0" prefHeight="25.0" prefWidth="134.0" unFocusColor="WHITE" />
@@ -192,7 +193,7 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <JFXButton layoutX="685.0" layoutY="568.0" onAction="#btnPlaceOrderOnAction" styleClass="adminNewBtn" stylesheets="@DarkTheme.css" text="Place Order" textFill="WHITE">
+      <JFXButton layoutX="685.0" layoutY="568.0" onAction="#btnPlaceOrderOnAction" prefHeight="30.0" prefWidth="135.0" style="-fx-background-radius: 3.0em;" styleClass="adminNewBtn" stylesheets="@DarkTheme.css" text="Place Order" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -207,27 +208,27 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblEmail" layoutX="367.0" layoutY="243.0" text="sugith@gmail.com" textFill="#ffd400">
+      <Label fx:id="lblEmail" layoutX="347.0" layoutY="243.0" prefHeight="19.0" prefWidth="146.0" text="sugith@gmail.com" textFill="#ffd400">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblQty" layoutX="783.0" layoutY="167.0" text="5" textFill="#ffb700">
+      <Label fx:id="lblQty" layoutX="805.0" layoutY="167.0" text="5" textFill="#ffb700">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblPrice" layoutX="590.0" layoutY="167.0" text="500.00" textFill="#ffb700">
+      <Label fx:id="lblSellingPrice" layoutX="590.0" layoutY="167.0" text="500.00" textFill="#ffb700">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblDiscount" layoutX="590.0" layoutY="204.0" text="5%" textFill="#ffb700">
+      <Label fx:id="lblType" layoutX="590.0" layoutY="204.0" text="Coat" textFill="#ffb700">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblOrderId" layoutX="781.0" layoutY="135.0" text="C0001" textFill="#ffb700">
+      <Label fx:id="lblOrderId" layoutX="781.0" layoutY="135.0" text="OR#00001" textFill="#ffb700">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -248,7 +249,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblItemCode1" layoutX="782.0" layoutY="204.0" text="XL" textFill="#ffb700">
+      <Label fx:id="lblSize" layoutX="804.0" layoutY="204.0" text="XL" textFill="#ffb700">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -258,11 +259,11 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblEmail1" layoutX="590.0" layoutY="243.0" text="xxxxxxxxxxxxxxxxxxxxxx" textFill="#ffd400">
+      <Label fx:id="lblDescription" layoutX="590.0" layoutY="243.0" text="xxxxxxxxxxxxxxxxxxx" textFill="#ffd400">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <JFXComboBox fx:id="cmbItemCodes" focusColor="#f80000" layoutX="583.0" layoutY="123.0" prefHeight="25.0" prefWidth="102.0" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cmbItemCode" focusColor="#f80000" layoutX="583.0" layoutY="123.0" prefHeight="25.0" prefWidth="102.0" unFocusColor="WHITE" />
    </children>
 </AnchorPane>
