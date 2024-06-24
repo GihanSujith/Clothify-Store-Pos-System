@@ -19,6 +19,8 @@ import java.util.ResourceBundle;
 public class UserRegisterFormController implements Initializable {
     public AnchorPane LoadFormContent;
     @FXML
+    private JFXTextField txtAccountID;
+    @FXML
     private JFXTextField txtFirstName;
     @FXML
     private JFXTextField txtLastName;
@@ -63,6 +65,7 @@ public class UserRegisterFormController implements Initializable {
             throw new RuntimeException(e);
         }
         Connection connectDB = connectNow.getConnection();
+
 
         String firstname = txtFirstName.getText();
         String lastname = txtLastName.getText();

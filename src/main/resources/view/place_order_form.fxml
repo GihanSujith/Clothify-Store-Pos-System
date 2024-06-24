@@ -95,7 +95,7 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font></JFXButton>
-      <Label layoutX="238.0" layoutY="135.0" text="Employer IDS* :" textFill="WHITE">
+      <Label layoutX="238.0" layoutY="135.0" text="Customer IDS* :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -151,7 +151,7 @@
             <TableColumn prefWidth="93.0" text="Option" />
         </columns>
       </TableView>
-      <JFXComboBox fx:id="cmbEmployerIDs" focusColor="#ff0011" layoutX="351.0" layoutY="123.0" prefHeight="25.0" prefWidth="134.0" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cmbCustomerIDs" focusColor="#ff0011" layoutX="351.0" layoutY="123.0" prefHeight="25.0" prefWidth="134.0" unFocusColor="WHITE" />
       <Label layoutX="276.0" layoutY="529.0" text="Total :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />

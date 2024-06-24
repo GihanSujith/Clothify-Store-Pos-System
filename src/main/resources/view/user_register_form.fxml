@@ -29,52 +29,52 @@
             <Font name="System Bold" size="27.0" />
          </font>
       </Label>
-      <Label layoutX="391.0" layoutY="41.0" text="First Name :" textFill="#fcfcfc">
+      <Label layoutX="391.0" layoutY="101.0" text="First Name :" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="391.0" layoutY="107.0" text="Last Name :" textFill="#fcfcfc">
+      <Label layoutX="392.0" layoutY="165.0" text="Last Name :" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="391.0" layoutY="182.0" text="User Name :" textFill="#fcfcfc">
+      <Label layoutX="390.0" layoutY="227.0" text="User Name :" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="395.0" layoutY="261.0" text="Password :" textFill="#fcfcfc">
+      <Label layoutX="391.0" layoutY="304.0" text="Password :" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="397.0" layoutY="339.0" text="Confirm Password :" textFill="#fcfcfc">
+      <Label layoutX="391.0" layoutY="367.0" text="Confirm Password :" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtFirstName" focusColor="RED" layoutX="391.0" layoutY="69.0" prefHeight="25.0" prefWidth="316.0" promptText="first name" unFocusColor="WHITE">
+      <JFXTextField fx:id="txtFirstName" focusColor="RED" layoutX="391.0" layoutY="120.0" prefHeight="25.0" prefWidth="316.0" promptText="first name" unFocusColor="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtLastName" focusColor="RED" layoutX="391.0" layoutY="134.0" prefHeight="25.0" prefWidth="316.0" promptText="last name" unFocusColor="WHITE">
+      <JFXTextField fx:id="txtLastName" focusColor="RED" layoutX="391.0" layoutY="186.0" prefHeight="25.0" prefWidth="316.0" promptText="last name" unFocusColor="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtUserName" focusColor="RED" layoutX="391.0" layoutY="209.0" prefHeight="25.0" prefWidth="316.0" promptText="user name" unFocusColor="WHITE">
+      <JFXTextField fx:id="txtUserName" focusColor="RED" layoutX="391.0" layoutY="248.0" prefHeight="25.0" prefWidth="316.0" promptText="user name" unFocusColor="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="setPasswordField" focusColor="RED" layoutX="396.0" layoutY="288.0" prefHeight="25.0" prefWidth="316.0" promptText="password" unFocusColor="WHITE">
+      <JFXTextField fx:id="setPasswordField" focusColor="RED" layoutX="391.0" layoutY="325.0" prefHeight="25.0" prefWidth="316.0" promptText="password" unFocusColor="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="confirmPasswordField" focusColor="RED" layoutX="396.0" layoutY="366.0" prefHeight="25.0" prefWidth="316.0" promptText="confirm password" unFocusColor="WHITE">
+      <JFXTextField fx:id="confirmPasswordField" focusColor="RED" layoutX="391.0" layoutY="387.0" prefHeight="25.0" prefWidth="316.0" promptText="confirm password" unFocusColor="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -97,10 +97,20 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblConfirmPassword" alignment="CENTER_RIGHT" layoutX="392.0" layoutY="340.0" prefHeight="19.0" prefWidth="381.0" textFill="RED">
+      <Label fx:id="lblConfirmPassword" alignment="CENTER_RIGHT" layoutX="391.0" layoutY="368.0" prefHeight="19.0" prefWidth="381.0" textFill="RED">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
+      <Label layoutX="390.0" layoutY="41.0" text="Account ID :" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAccountID" focusColor="RED" layoutX="391.0" layoutY="61.0" prefHeight="25.0" prefWidth="316.0" promptText="first name" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
    </children>
 </AnchorPane>

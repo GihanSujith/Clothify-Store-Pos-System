@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="675.0" prefWidth="1196.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.AddCustomerFormController">
+<AnchorPane prefHeight="675.0" prefWidth="1196.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.customer.AddCustomerFormController">
    <children>
       <AnchorPane fx:id="LoadFormContent" layoutX="20.0" layoutY="20.0" prefHeight="655.0" prefWidth="1165.0">
          <children>

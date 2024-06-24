@@ -55,3 +55,7 @@ Asrc/main/java/org/store/controller/AddCustomerFormController.java,7\d\7d0f3e88
 .src/main/java/org/store/dto/tm/CustomerTM.java,7\c\7c45356510f8c4f77440ed7f602fe0d92bce1631
 r
 Bsrc/main/java/org/store/controller/UserRegisterFormController.java,8\6\863c748c35caa8e1580a24124768eb3a763c8b76
+s
+Csrc/main/java/org/store/controller/customer/CustomerController.java,1\d\1d4b2ce8c22fbc38dcffab8cc687e853387cf0a6
+z
+Jsrc/main/java/org/store/controller/customer/AddCustomerFormController.java,b\0\b0ce926a78682773e3e3525196fc1bbfdc20e52f

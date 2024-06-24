@@ -1,4 +1,4 @@
-package org.store.controller;
+package org.store.controller.customer;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
@@ -65,7 +65,6 @@ public class AddCustomerFormController implements Initializable {
     public DatePicker dateDob;
     public JFXComboBox cmbTitle;
     public JFXTextField txtBankAccountNo;
-    private List<CustomerDto> customerDtoList;
 
     public void backBtnOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = this.getClass().getResource("/view/admin_dashboard.fxml");
@@ -92,15 +91,17 @@ public class AddCustomerFormController implements Initializable {
         colBankAccountNo.setCellValueFactory(new PropertyValueFactory<>("bankAccountNo"));
         loadDateAndTime();
         loadDropMenu();
-        loadCustomers();
+
         loadCustomerTable();
     }
 
     private void loadCustomerTable() {
         ObservableList<CustomerTM> customerTableData = FXCollections.observableArrayList();
+        ObservableList<CustomerDto> allCustomers = CustomerController.getInstance().loadCustomers();
 
-        customerDtoList.forEach(customerDto ->{
-            CustomerTM customerTM = new CustomerTM(
+        allCustomers.forEach(customerDto ->{
+            customerTableData.add(
+             new CustomerTM(
                     customerDto.getId(),
                     customerDto.getTitle(),
                     customerDto.getName(),
@@ -111,39 +112,12 @@ public class AddCustomerFormController implements Initializable {
                     customerDto.getContactNo(),
                     customerDto.getBankName(),
                     customerDto.getBankAccountNo()
+             )
             );
-            customerTableData.add(customerTM);
         });
-
         tblCustomer.setItems(customerTableData);
-
-
     }
 
-    private void loadCustomers() {
-        customerDtoList=new ArrayList<>();
-        try {
-            ResultSet resultSet = DBConnection.getInstance().getConnection().createStatement().executeQuery("SELECT * FROM customer");
-            while (resultSet.next()){
-                CustomerDto customerDto = new CustomerDto(
-                        resultSet.getString(1),
-                        resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getDate(4),
-                        resultSet.getString(5),
-                        resultSet.getString(6),
-                        resultSet.getString(7),
-                        resultSet.getDouble(8),
-                        resultSet.getString(9),
-                        resultSet.getString(10)
-                );
-                customerDtoList.add(customerDto);
-
-            }
-        } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     private void loadDropMenu() {
         ObservableList<Object> items = FXCollections.observableArrayList();
@@ -206,7 +180,6 @@ public class AddCustomerFormController implements Initializable {
             psTm.setString(10,customerDto.getBankAccountNo());
 
             psTm.execute();
-            loadCustomers();
             loadCustomerTable();
             clearText();
 
@@ -220,7 +193,6 @@ public class AddCustomerFormController implements Initializable {
     public void btnDeleteOnAction(ActionEvent actionEvent) {
         try {
             boolean execute = DBConnection.getInstance().getConnection().createStatement().execute("DELETE FROM customer WHERE CustId='" + txtCustomerID.getText() + "'");
-            loadCustomers();
             loadCustomerTable();
             clearText();
             if(execute){
