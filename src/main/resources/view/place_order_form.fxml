@@ -62,12 +62,12 @@
             <Image url="@assests/o.png" />
          </image>
       </ImageView>
-      <Label layoutX="9.0" layoutY="152.0" text="Gihan Sujith Kumara" textFill="WHITE">
+      <Label layoutX="9.0" layoutY="152.0" text="Mr. Sheshan Thilakshana" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="182.0" prefHeight="19.0" prefWidth="184.0" text="gihansujith943@gmail.com" textFill="WHITE">
+      <Label layoutX="28.0" layoutY="182.0" prefHeight="19.0" prefWidth="184.0" text="clothify@sample.com" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
