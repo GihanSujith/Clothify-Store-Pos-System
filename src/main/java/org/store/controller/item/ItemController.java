@@ -5,11 +5,13 @@ import javafx.collections.ObservableList;
 import org.store.db.DBConnection;
 import org.store.dto.CustomerDto;
 import org.store.dto.ItemDto;
+import org.store.dto.OrderDetailDto;
 import org.store.utill.CrudUtill;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 public class ItemController {
 
@@ -76,7 +78,28 @@ public class ItemController {
         }
         return null;
     }
-    public boolean updateStock(){
-        return true;
+    public boolean updateStock(List<OrderDetailDto> orderDetailDtoList){
+        boolean isUpdate = false;
+        for (OrderDetailDto orderDetailDto:orderDetailDtoList){
+            isUpdate = updateStock(orderDetailDto);
+        }
+        if (isUpdate){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean updateStock(OrderDetailDto orderDetailDto){
+
+        try {
+            Object isUpdate = CrudUtill.execute(
+                    "UPDATE item SET Qty=Qty-? WHERE ItemCode = ?",
+                    orderDetailDto.getQty(),
+                    orderDetailDto.getItemCode()
+            );
+            return (Boolean) isUpdate;
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

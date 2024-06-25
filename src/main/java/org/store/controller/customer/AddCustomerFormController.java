@@ -15,9 +15,12 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import org.store.bo.BoFactory;
+import org.store.bo.custom.CustomerBo;
 import org.store.db.DBConnection;
 import org.store.dto.CustomerDto;
 import org.store.dto.tm.CustomerTM;
+import org.store.utill.BoType;
 
 import java.io.IOException;
 import java.net.URL;
@@ -62,6 +65,8 @@ public class AddCustomerFormController implements Initializable {
     public DatePicker dateDob;
     public JFXComboBox cmbTitle;
     public JFXTextField txtBankAccountNo;
+
+    private CustomerBo customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
 
     public void backBtnOnAction(ActionEvent actionEvent) throws IOException {
         URL resource = this.getClass().getResource("/view/admin_dashboard.fxml");
@@ -163,7 +168,8 @@ public class AddCustomerFormController implements Initializable {
                     txtBankAccountNo.getText()
             );
 
-            boolean b = CustomerController.getInstance().addCustomer(customerDto);
+            //boolean b = CustomerController.getInstance().addCustomer(customerDto);
+            boolean b = customerBo.saveCustomer(customerDto);
             if (b){
                 new Alert(Alert.AlertType.CONFIRMATION,"Customer Not Added!").show();
             }else{

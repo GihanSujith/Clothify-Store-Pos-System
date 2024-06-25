@@ -28,7 +28,7 @@ public class OrderController {
             if (!isOrderAdd){
                 boolean isOrderDetailAdd = OrderDetailsController.getInstance().addOrderDetail(orderDto.getOrderDetailDtoList());
                 if (isOrderDetailAdd){
-                    boolean isUpdateStock = ItemController.getInstance().updateStock();
+                    boolean isUpdateStock = ItemController.getInstance().updateStock(orderDto.getOrderDetailDtoList());
                     if (isUpdateStock){
                         connection.setAutoCommit(true);
                         return true;
