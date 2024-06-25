@@ -3,30 +3,18 @@ package org.store.dto.tm;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class EmployeeTM {
-    private Integer empId;
-    private String title;
-    private String name;
-    private String nic;
-    private String dob;
-
-    public Integer getEmpId() {
-        return empId;
+    public String getId() {
+        return id;
     }
 
-    public void setEmpId(Integer empId) {
-        this.empId = empId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -37,56 +25,26 @@ public class EmployeeTM {
         this.name = name;
     }
 
-    public String getNic() {
-        return nic;
+    public String getCompany() {
+        return company;
     }
 
-    public void setNic(String nic) {
-        this.nic = nic;
+    public void setCompany(String company) {
+        this.company = company;
     }
 
-    public String getDob() {
-        return dob;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDob(String dob) {
-        this.dob = dob;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getBankAccountNo() {
-        return bankAccountNo;
-    }
+    private String id;
+    private String name;
+    private String company;
+    private String email;
 
-    public void setBankAccountNo(String bankAccountNo) {
-        this.bankAccountNo = bankAccountNo;
-    }
 
-    public String getBankBranch() {
-        return bankBranch;
-    }
-
-    public void setBankBranch(String bankBranch) {
-        this.bankBranch = bankBranch;
-    }
-
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    private String bankAccountNo;
-    private String bankBranch;
-    private String contact;
-    private String address;
 }

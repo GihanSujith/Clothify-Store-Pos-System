@@ -1,11 +1,13 @@
 package org.store.entity;
 
+import jakarta.persistence.Entity;
 import lombok.*;
 
 
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+
 public class User {
     private int id;
     private String user_name;

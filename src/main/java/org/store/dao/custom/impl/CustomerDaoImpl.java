@@ -1,16 +1,25 @@
 package org.store.dao.custom.impl;
 
+import org.hibernate.Session;
 import org.store.dao.custom.CustomerDao;
 import org.store.dto.CustomerDto;
 import org.store.entity.Customer;
 import org.store.utill.CrudUtill;
+import org.store.utill.HibernateUtil;
 
 import java.sql.SQLException;
 
 public class CustomerDaoImpl implements CustomerDao {
     @Override
     public boolean save(Customer entity) {
-        try {
+
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+        session.persist(entity);
+        session.getTransaction().commit();
+        session.close();
+        return true;
+        /*try {
             String SQL = "INSERT INTO customer VALUES (?,?,?,?,?,?,?,?,?,?)";
             CrudUtill.execute(
                     SQL,
@@ -30,7 +39,7 @@ public class CustomerDaoImpl implements CustomerDao {
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }
-        return false;
+        return false;*/
 
     }
 

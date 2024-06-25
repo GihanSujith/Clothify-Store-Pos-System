@@ -9,8 +9,16 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class EmployeeDto {
-    private String name;
-    private String title;
+
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -20,66 +28,23 @@ public class EmployeeDto {
         this.name = name;
     }
 
-    public String getTitle() {
-        return title;
+    public String getCompany() {
+        return company;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setCompany(String company) {
+        this.company = company;
     }
 
-    public String getNic() {
-        return nic;
+    public String getEmail() {
+        return email;
     }
 
-    public void setNic(String nic) {
-        this.nic = nic;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
-    public String getBankAccountNo() {
-        return bankAccountNo;
-    }
-
-    public void setBankAccountNo(String bankAccountNo) {
-        this.bankAccountNo = bankAccountNo;
-    }
-
-    public String getBankBranch() {
-        return bankBranch;
-    }
-
-    public void setBankBranch(String bankBranch) {
-        this.bankBranch = bankBranch;
-    }
-
-    private String nic;
-    private String address;
-    private String dob;
-    private String contact;
-    private String bankAccountNo;
-    private String bankBranch;
+    private String name;
+    private String company;
+    private String email;
 }

@@ -105,7 +105,7 @@
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </Label>
-                        <Label layoutX="245.0" layoutY="275.0" text="Contact :" textFill="WHITE">
+                        <Label layoutX="250.0" layoutY="275.0" text="Item :" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>
@@ -125,7 +125,7 @@
                               <Font name="System Bold" size="13.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="360.0" layoutY="263.0" prefHeight="25.0" prefWidth="226.0" promptText="contact">
+                        <TextField layoutX="360.0" layoutY="263.0" prefHeight="25.0" prefWidth="226.0" promptText="Item">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font>

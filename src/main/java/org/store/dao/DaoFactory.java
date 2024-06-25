@@ -1,7 +1,11 @@
 package org.store.dao;
 
+import org.store.bo.custom.impl.EmployeeBoImpl;
 import org.store.dao.custom.impl.CustomerDaoImpl;
+import org.store.dao.custom.impl.EmployeeDaoImpl;
 import org.store.utill.DaoType;
+
+import static org.store.utill.BoType.EMPLOYEE;
 
 public class DaoFactory {
 
@@ -14,6 +18,7 @@ public class DaoFactory {
     public <T extends SuperDao>T getDao(DaoType type){
         switch (type){
             case CUSTOMER:return (T)new CustomerDaoImpl();
+            case EMPLOYEE:return (T) new EmployeeDaoImpl();
         }
         return null;
     }
