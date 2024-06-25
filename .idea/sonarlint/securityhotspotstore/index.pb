@@ -42,13 +42,9 @@ p
 z
 Jsrc/main/java/org/store/controller/EmployeeRegistrationFormController.java,f\5\f582074259d97411c47f0b0cc7534cf086f43d4c
 n
->src/main/java/org/store/controller/AddItemsFormController.java,6\4\645e918f353ef221c354cab02b813043fa2498ce
-n
 >src/main/java/org/store/controller/OrderDetailsController.java,0\5\0542f8586ca899478b55b1e798084e19bee99ec1
 n
 >src/main/java/org/store/controller/SupplierFormController.java,c\2\c2666c81af2241912d55f883825880f96a46d11b
-q
-Asrc/main/java/org/store/controller/AddCustomerFormController.java,7\d\7d0f3e886d788ea798e621d381912f234f5ad557
 \
 ,src/main/java/org/store/dto/CustomerDto.java,9\0\9048aa4f586e33f25e170d0efe1daf4c37c84aec
 ^
@@ -63,3 +59,7 @@ k
 ;src/main/java/org/store/controller/item/ItemController.java,3\8\382a45bab31bf129dec11b8fcb9e7e08a9550259
 s
 Csrc/main/java/org/store/controller/item/AddItemsFormController.java,e\d\eded2f4970f56e32cf7bcc761f765d4cd286bafe
+p
+@src/main/java/org/store/controller/customer/CustomerService.java,c\8\c81c4e28a5cce03f48f29712d0ce84d328a533f0
+Z
+*src/main/java/org/store/dto/tm/ItemTM.java,f\2\f2f3551251ab91f3c37106ca46f453bd700c8065

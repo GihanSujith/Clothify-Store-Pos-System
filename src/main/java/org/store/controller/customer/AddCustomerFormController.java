@@ -11,10 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
@@ -150,41 +147,30 @@ public class AddCustomerFormController implements Initializable {
 
     public void btnAddCustomerOnAction(ActionEvent actionEvent) throws ParseException {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = format.parse(dateDob.getValue().toString());
-        CustomerDto customerDto = new CustomerDto(txtCustomerID.getText(),
-                cmbTitle.getValue().toString(),
-                txtName.getText(),
-                date,
-                txtNic.getText(),
-                txtAddress.getText(),
-                txtEmail.getText(),
-                Double.parseDouble(txtContactNo.getText()),
-                txtbankName.getText(),
-                txtBankAccountNo.getText()
-        );
-
-
+        Date date = null;
         try {
+            date = format.parse(dateDob.getValue().toString());
+            CustomerDto customerDto = new CustomerDto(
+                    txtCustomerID.getText(),
+                    cmbTitle.getValue().toString(),
+                    txtName.getText(),
+                    date,
+                    txtNic.getText(),
+                    txtAddress.getText(),
+                    txtEmail.getText(),
+                    Double.parseDouble(txtContactNo.getText()),
+                    txtbankName.getText(),
+                    txtBankAccountNo.getText()
+            );
 
-            Connection connection = DBConnection.getInstance().getConnection();
-            PreparedStatement psTm = connection.prepareStatement("INSERT INTO customer VALUES (?,?,?,?,?,?,?,?,?,?)");
-            psTm.setString(1,customerDto.getId());
-            psTm.setString(2,customerDto.getTitle());
-            psTm.setString(3,customerDto.getName());
-            psTm.setObject(4,customerDto.getDob());
-            psTm.setString(5,customerDto.getNic());
-            psTm.setString(6,customerDto.getAddress());
-            psTm.setString(7,customerDto.getEmail());
-            psTm.setDouble(8,customerDto.getContactNo());
-            psTm.setString(9,customerDto.getBankName());
-            psTm.setString(10,customerDto.getBankAccountNo());
+            boolean b = CustomerController.getInstance().addCustomer(customerDto);
+            if (b){
+                new Alert(Alert.AlertType.CONFIRMATION,"Customer Not Added!").show();
+            }else{
+                new Alert(Alert.AlertType.CONFIRMATION,"Customer  Added!").show();
+            }
 
-            psTm.execute();
-            loadCustomerTable();
-            clearText();
-
-
-        } catch (ClassNotFoundException | SQLException e) {
+        }catch (ParseException e){
             throw new RuntimeException(e);
         }
 

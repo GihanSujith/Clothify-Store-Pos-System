@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import org.store.db.DBConnection;
 import org.store.dto.CustomerDto;
 import org.store.dto.ItemDto;
+import org.store.utill.CrudUtill;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,7 +26,7 @@ public class ItemController {
     public ObservableList<ItemDto> loadItems() {
         try {
 
-            ResultSet resultSet = DBConnection.getInstance().getConnection().createStatement().executeQuery("SELECT * FROM item");
+            ResultSet resultSet = CrudUtill.execute("SELECT * FROM item");
             ObservableList<ItemDto> customerDtoList= FXCollections.observableArrayList();
 
             while (resultSet.next()) {
@@ -54,13 +55,7 @@ public class ItemController {
 
     public ItemDto searchItem(String itemCode){
         try {
-            PreparedStatement psTm = DBConnection.getInstance().getConnection().prepareStatement("SELECT * FROM item WHERE ItemCode=?");
-
-            psTm.setString(1,itemCode);
-            boolean execute = psTm.execute();
-            if (execute) {
-                ResultSet resultSet = psTm.getResultSet();
-                ;
+            ResultSet resultSet = CrudUtill.execute( "SELECT * FROM item WHERE ItemCode=?",itemCode);
                 while (resultSet.next()) {
                     return new ItemDto(
                             resultSet.getString(1),
@@ -74,7 +69,7 @@ public class ItemController {
                     );
 
                 }
-            }
+
 
         } catch (ClassNotFoundException | SQLException  e) {
             throw new RuntimeException(e);

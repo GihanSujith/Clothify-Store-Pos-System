@@ -65,16 +65,19 @@ public class CustomerTM {
         this.email = email;
     }
 
+
+
+    public String getBankName() {
+        return bankName;
+    }
+
+
     public Double getContactNo() {
         return contactNo;
     }
 
     public void setContactNo(Double contactNo) {
         this.contactNo = contactNo;
-    }
-
-    public String getBankName() {
-        return bankName;
     }
 
     public void setBankName(String bankName) {

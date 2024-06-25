@@ -18,6 +18,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import org.store.controller.customer.CustomerController;
@@ -25,6 +26,7 @@ import org.store.controller.item.ItemController;
 import org.store.db.DBConnection;
 import org.store.dto.CustomerDto;
 import org.store.dto.ItemDto;
+import org.store.dto.tm.ItemTM;
 import org.store.entity.Employee;
 
 import java.beans.Statement;
@@ -68,7 +70,7 @@ public class PlaceOrderFormController implements Initializable {
     public TableColumn colUnitPrice;
     public TableColumn colType;
     public TableColumn colAmount;
-    public TableColumn colDate;
+
     public TableColumn colDesc;
     public TableColumn colSize;
     public TableView tblCart;
@@ -91,6 +93,14 @@ public class PlaceOrderFormController implements Initializable {
         loadCustomerIDs();
         generateOrderId();
         loadItemCodes();
+
+        colItemCode.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
+        colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        colUnitPrice.setCellValueFactory(new PropertyValueFactory<>("sellingPrice"));
+        colType.setCellValueFactory(new PropertyValueFactory<>("type"));
+        colAmount.setCellValueFactory(new PropertyValueFactory<>("amount"));
+        colDesc.setCellValueFactory(new PropertyValueFactory<>("description"));
+        colSize.setCellValueFactory(new PropertyValueFactory<>("size"));
 
         cmbCustomerIDs.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) -> {
             setCustomerFroLbl((String) newValue);
@@ -166,16 +176,47 @@ public class PlaceOrderFormController implements Initializable {
     }
 
     public void btnPlaceOrderOnAction(ActionEvent actionEvent) {
+
     }
+
+
 
     public void txtAddtoCartOnAction(ActionEvent actionEvent) {
+        btnAddToCartOnAction(actionEvent);
     }
 
+    ObservableList<ItemTM> cartList = FXCollections.observableArrayList();
     public void btnAddToCartOnAction(ActionEvent actionEvent) {
+
+        String itemCode =(String) cmbItemCode.getValue();
+        Integer qtyFroCustomer = Integer.parseInt(txtQtyFroCustomer.getText());
+        Double sellingPrice = Double.valueOf(lblSellingPrice.getText());
+        String type = lblType.getText();
+        Double amount = qtyFroCustomer*sellingPrice;
+        String description = lblDescription.getText();
+        String size = lblSize.getText();
+        ItemTM itemTM = new ItemTM(itemCode, qtyFroCustomer, sellingPrice, type, amount, description, size);
+        System.out.println(itemTM);
+
+        int qtyStock = Integer.parseInt(lblQty.getText());
+        if (qtyStock>qtyFroCustomer){
+            new Alert(Alert.AlertType.WARNING,"Invalid QTY").show();
+            return;
+        }
+
+        cartList.add(itemTM);
+        tblCart.setItems(cartList);
+        calcNetTotal();
     }
 
     public void btnClearOnAction(ActionEvent actionEvent) {
     }
 
-
+    public void calcNetTotal(){
+        double ttl=0;
+        for (ItemTM carObj : cartList){
+            ttl+=carObj.getAmount();
+        }
+        lblNetTotal.setText(String.valueOf(ttl)+" /=");
+    }
 }

@@ -199,22 +199,22 @@
                </font>
             </JFXTextField>
             <DatePicker fx:id="dateDob" layoutX="396.0" layoutY="239.0" prefHeight="25.0" prefWidth="206.0" promptText="date of birth" />
-            <JFXButton layoutX="671.0" layoutY="322.0" onAction="#btnUpdateOnAction" prefHeight="27.0" prefWidth="172.0" styleClass="buttonUpdate" stylesheets="@DarkTheme.css" text="Update" textFill="WHITE">
+            <JFXButton layoutX="671.0" layoutY="322.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="172.0" style="-fx-background-radius: 3.0em;" styleClass="buttonUpdate" stylesheets="@DarkTheme.css" text="Update" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="671.0" layoutY="188.0" onAction="#btnAddCustomerOnAction" prefHeight="27.0" prefWidth="172.0" styleClass="adminBtn" stylesheets="@DarkTheme.css" text="Add Customer" textFill="WHITE">
+            <JFXButton layoutX="671.0" layoutY="188.0" onAction="#btnAddCustomerOnAction" prefHeight="39.0" prefWidth="172.0" style="-fx-background-radius: 3.0em;" styleClass="adminBtn" stylesheets="@DarkTheme.css" text="Add Customer" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="671.0" layoutY="251.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="172.0" styleClass="buttonDelete" stylesheets="@DarkTheme.css" text="Delete" textFill="WHITE">
+            <JFXButton layoutX="671.0" layoutY="251.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="172.0" style="-fx-background-radius: 3.0em;" styleClass="buttonDelete" stylesheets="@DarkTheme.css" text="Delete" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="671.0" layoutY="395.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="172.0" styleClass="buttonAdd" stylesheets="@DarkTheme.css" text="Clear" textFill="WHITE">
+            <JFXButton layoutX="671.0" layoutY="395.0" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="172.0" style="-fx-background-radius: 3.0em;" styleClass="buttonAdd" stylesheets="@DarkTheme.css" text="Clear" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
@@ -242,7 +242,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <JFXButton layoutX="668.0" layoutY="136.0" onAction="#btnSearchOnAction" prefHeight="27.0" prefWidth="172.0" styleClass="buttonDBlue" stylesheets="@DarkTheme.css" text="Search" textFill="WHITE">
+            <JFXButton layoutX="668.0" layoutY="136.0" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="172.0" style="-fx-background-radius: 3.0em;" styleClass="buttonDBlue" stylesheets="@DarkTheme.css" text="Search" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

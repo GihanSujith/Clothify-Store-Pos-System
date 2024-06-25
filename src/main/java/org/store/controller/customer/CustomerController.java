@@ -13,7 +13,7 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
-public class CustomerController {
+public class CustomerController implements CustomerService{
 
     private static CustomerController instance;
 
@@ -27,13 +27,7 @@ public class CustomerController {
     }
     public CustomerDto searchCustomer(String customerId){
         try {
-            PreparedStatement psTm = DBConnection.getInstance().getConnection().prepareStatement("SELECT * FROM customer WHERE CustId=?");
-
-            psTm.setString(1,customerId);
-            boolean execute = psTm.execute();
-            if (execute) {
-                ResultSet resultSet = psTm.getResultSet();
-                ;
+            ResultSet resultSet = CrudUtill.execute("SELECT * FROM customer WHERE CustId=?",customerId);
                 while (resultSet.next()) {
                     return new CustomerDto(
                             resultSet.getString(1),
@@ -49,7 +43,7 @@ public class CustomerController {
                     );
 
                 }
-            }
+
 
         } catch (ClassNotFoundException | SQLException  e) {
             throw new RuntimeException(e);
@@ -59,7 +53,7 @@ public class CustomerController {
     public ObservableList<CustomerDto> loadCustomers() {
         try {
 
-            ResultSet resultSet = DBConnection.getInstance().getConnection().createStatement().executeQuery("SELECT * FROM customer");
+            ResultSet resultSet = CrudUtill.execute("SELECT * FROM customer");
             ObservableList<CustomerDto> customerDtoList= FXCollections.observableArrayList();
 
             while (resultSet.next()) {
@@ -83,5 +77,29 @@ public class CustomerController {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public boolean addCustomer(CustomerDto customerDto){
+        try {
+            String SQL = "INSERT INTO customer VALUES (?,?,?,?,?,?,?,?,?,?)";
+            CrudUtill.execute(
+                    SQL,
+                    customerDto.getId(),
+                    customerDto.getTitle(),
+                    customerDto.getName(),
+                    customerDto.getDob(),
+                    customerDto.getNic(),
+                    customerDto.getAddress(),
+                    customerDto.getEmail(),
+                    customerDto.getContactNo(),
+                    customerDto.getBankName(),
+                    customerDto.getBankAccountNo()
+            );
+
+
+        } catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return false;
     }
 }
