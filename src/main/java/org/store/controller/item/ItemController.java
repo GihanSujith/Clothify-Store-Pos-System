@@ -76,4 +76,7 @@ public class ItemController {
         }
         return null;
     }
+    public boolean updateStock(){
+        return true;
+    }
 }

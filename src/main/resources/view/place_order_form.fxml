@@ -172,12 +172,12 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="638.0" layoutY="529.0" text="Balance :" textFill="WHITE">
+      <Label layoutX="464.0" layoutY="570.0" text="Balance :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <Label layoutX="724.0" layoutY="529.0" text="000.00" textFill="RED">
+      <Label layoutX="558.0" layoutY="568.0" text="000.00" textFill="RED">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -192,42 +192,42 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <JFXButton layoutX="685.0" layoutY="568.0" onAction="#btnPlaceOrderOnAction" prefHeight="30.0" prefWidth="135.0" style="-fx-background-radius: 3.0em;" styleClass="adminNewBtn" stylesheets="@DarkTheme.css" text="Place Order" textFill="WHITE">
+      <JFXButton layoutX="744.0" layoutY="517.0" onAction="#btnPlaceOrderOnAction" prefHeight="30.0" prefWidth="135.0" style="-fx-background-radius: 3.0em;" styleClass="adminNewBtn" stylesheets="@DarkTheme.css" text="Place Order" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblName" layoutX="367.0" layoutY="167.0" text="Saman" textFill="#0aff50">
+      <Label fx:id="lblName" layoutX="367.0" layoutY="167.0" text="Saman" textFill="#0afff8">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblContact" layoutX="367.0" layoutY="204.0" text="0769761122" textFill="#00ff4e">
+      <Label fx:id="lblContact" layoutX="367.0" layoutY="204.0" text="0769761122" textFill="#00fff8">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblEmail" layoutX="347.0" layoutY="243.0" prefHeight="19.0" prefWidth="146.0" text="sugith@gmail.com" textFill="#00ff5d">
+      <Label fx:id="lblEmail" layoutX="347.0" layoutY="243.0" prefHeight="19.0" prefWidth="146.0" text="sugith@gmail.com" textFill="#00fff8">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblQty" layoutX="805.0" layoutY="167.0" text="5" textFill="#00ff4e">
+      <Label fx:id="lblQty" layoutX="805.0" layoutY="167.0" text="5" textFill="#00fff8">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblSellingPrice" layoutX="590.0" layoutY="167.0" text="500.00" textFill="#00ff4d">
+      <Label fx:id="lblSellingPrice" layoutX="590.0" layoutY="167.0" text="500.00" textFill="#00fff7">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblType" layoutX="590.0" layoutY="204.0" text="Coat" textFill="#00ff4e">
+      <Label fx:id="lblType" layoutX="590.0" layoutY="204.0" text="Coat" textFill="#00fff8">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblOrderId" layoutX="781.0" layoutY="135.0" text="OR#00001" textFill="#ff000f">
+      <Label fx:id="lblOrderId" layoutX="792.0" layoutY="135.0" text="D001" textFill="#ff000f">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -248,7 +248,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblSize" layoutX="804.0" layoutY="204.0" text="XL" textFill="#00ff4e">
+      <Label fx:id="lblSize" layoutX="804.0" layoutY="204.0" text="XL" textFill="#00fff8">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -258,11 +258,21 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label fx:id="lblDescription" layoutX="590.0" layoutY="243.0" text="xxxxxxxxxxxxxxxxxxx" textFill="#00ff4e">
+      <Label fx:id="lblDescription" layoutX="590.0" layoutY="243.0" text="xxxxxxxxxxxxxxxxxxx" textFill="#00fff8">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
       <JFXComboBox fx:id="cmbItemCode" focusColor="#f80000" layoutX="583.0" layoutY="123.0" prefHeight="25.0" prefWidth="102.0" unFocusColor="WHITE" />
+      <JFXButton layoutX="746.0" layoutY="561.0" onAction="#btnCommitOnAction" prefHeight="30.0" prefWidth="135.0" style="-fx-background-radius: 3.0em;" styleClass="cashierBtn" stylesheets="@DarkTheme.css" text="Commit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="747.0" layoutY="602.0" onAction="#btnRollBackOnAction" prefHeight="30.0" prefWidth="135.0" style="-fx-background-radius: 3.0em; -fx-background-color: fdf0d5;" stylesheets="@DarkTheme.css" text="Roll Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

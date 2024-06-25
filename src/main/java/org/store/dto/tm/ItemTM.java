@@ -77,6 +77,15 @@ public class ItemTM {
     private String type;
     private Double amount;
 
+    public Double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Double discount) {
+        this.discount = discount;
+    }
+
     private String description;
     private String size;
+    private Double discount;
 }
