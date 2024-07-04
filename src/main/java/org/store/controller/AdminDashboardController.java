@@ -41,9 +41,7 @@ public class AdminDashboardController implements Initializable {
 
     public void btnItemOnAction(ActionEvent actionEvent) throws IOException{
         URL resource = this.getClass().getResource("/view/add_items_form.fxml");
-
         assert resource != null;
-
         Parent load = (Parent) FXMLLoader.load(resource);
         this.LoadFormContent.getChildren().clear();
         this.LoadFormContent.getChildren().add(load);
@@ -61,9 +59,7 @@ public class AdminDashboardController implements Initializable {
 
     public void btnEmployeeOnAction(ActionEvent actionEvent) throws IOException{
         URL resource = this.getClass().getResource("/view/employee_registration_form.fxml");
-
         assert resource != null;
-
         Parent load = (Parent) FXMLLoader.load(resource);
         this.LoadFormContent.getChildren().clear();
         this.LoadFormContent.getChildren().add(load);
