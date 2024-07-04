@@ -6,6 +6,9 @@ import org.store.utill.CrudUtill;
 import java.sql.SQLException;
 import java.util.List;
 
+import static org.store.utill.CrudUtill.*;
+import static org.store.utill.CrudUtill.execute;
+
 public class OrderDetailsController {
 
     private static OrderDetailsController instance;

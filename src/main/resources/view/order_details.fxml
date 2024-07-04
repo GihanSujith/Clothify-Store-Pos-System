@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="666.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.OrderDetailsController">
+<AnchorPane prefHeight="666.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.store.controller.OrderDetailsFormController">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -93,30 +93,20 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </JFXButton>
-                  <TableView layoutX="228.0" layoutY="214.0" prefHeight="237.0" prefWidth="664.0" stylesheets="@DarkTheme.css">
+                  <TableView fx:id="tblOrder" layoutX="228.0" layoutY="214.0" prefHeight="237.0" prefWidth="664.0" stylesheets="@DarkTheme.css">
                      <columns>
-                        <TableColumn prefWidth="67.0" text="Order ID" />
-                        <TableColumn prefWidth="78.0" text="Date" />
-                        <TableColumn prefWidth="60.0" text="Total" />
-                        <TableColumn prefWidth="101.0" text="Employee Name" />
-                        <TableColumn prefWidth="76.0" text="Contact" />
-                        <TableColumn prefWidth="104.0" text="Email" />
-                        <TableColumn prefWidth="79.0" text="Employee" />
-                        <TableColumn prefWidth="98.0" text="Address" />
+                        <TableColumn fx:id="colOrderId" prefWidth="214.0" text="Order ID" />
+                        <TableColumn fx:id="colDate" prefWidth="237.0" text="Order Date" />
+                        <TableColumn fx:id="colCustomerId" prefWidth="212.0" text="Customer ID" />
                      </columns>
                   </TableView>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#062354" height="155.0" layoutX="206.0" layoutY="491.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="705.0" />
-                  <TableView layoutX="229.0" layoutY="491.0" prefHeight="155.0" prefWidth="664.0" stylesheets="@DarkTheme.css">
+                  <TableView fx:id="tblOrderDetails" layoutX="229.0" layoutY="491.0" prefHeight="155.0" prefWidth="664.0" stylesheets="@DarkTheme.css">
                      <columns>
-                        <TableColumn prefWidth="67.0" text="Item Code" />
-                        <TableColumn prefWidth="78.0" text="Description" />
-                        <TableColumn prefWidth="60.0" text="Qty" />
-                        <TableColumn prefWidth="78.0" text="Unit Price" />
-                        <TableColumn prefWidth="78.0" text="Date" />
-                        <TableColumn prefWidth="83.0" text="Discount" />
-                        <TableColumn prefWidth="68.0" text="Type" />
-                        <TableColumn prefWidth="81.0" text="Size" />
-                        <TableColumn prefWidth="70.0" text="Amount" />
+                        <TableColumn fx:id="colItemCode" prefWidth="145.0" text="Item Code" />
+                        <TableColumn fx:id="colOrderId2" prefWidth="140.0" text="Order ID" />
+                        <TableColumn fx:id="colQty" prefWidth="199.0" text="Order QTY" />
+                        <TableColumn fx:id="colDiscount" prefWidth="179.0" text="Discount" />
                      </columns>
                   </TableView>
                   <Label layoutX="243.0" layoutY="142.0" text="Order ID :" textFill="WHITE">
@@ -129,8 +119,8 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <JFXComboBox focusColor="RED" layoutX="331.0" layoutY="130.0" prefHeight="25.0" prefWidth="170.0" unFocusColor="WHITE" />
-                  <JFXComboBox focusColor="RED" layoutX="692.0" layoutY="130.0" prefHeight="25.0" prefWidth="170.0" unFocusColor="WHITE" />
+                  <JFXComboBox fx:id="cmbOrderId" focusColor="RED" layoutX="331.0" layoutY="130.0" prefHeight="25.0" prefWidth="170.0" unFocusColor="WHITE" />
+                  <JFXComboBox fx:id="cmbItemCode" focusColor="RED" layoutX="692.0" layoutY="130.0" prefHeight="25.0" prefWidth="170.0" unFocusColor="WHITE" />
                </children>
             </AnchorPane>
          </children>

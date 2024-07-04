@@ -1,8 +1,11 @@
 package org.store.entity;
 
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -10,7 +13,6 @@ import lombok.ToString;
 public class Order {
 
     private String orderId;
-    private String date;
 
     public String getOrderId() {
         return orderId;
@@ -76,6 +78,7 @@ public class Order {
         this.customerContact = customerContact;
     }
 
+    private String date;
     private double totalDiscount;
     private double total;
     private String empId;

@@ -33,16 +33,10 @@ Y
 )src/main/java/org/store/dto/OrderDto.java,7\a\7af279e7cd70ce38a49ec83d2a8b7ed59592ffc8
 ^
 .src/main/java/org/store/dto/tm/EmployeeTM.java,7\5\7583c5c5375760cfd74b9f6748267d742f50bbfc
-z
-Jsrc/main/java/org/store/controller/employee/AddEmployeeFormController.java,1\6\16283a5c0a0ed3cdd64fff865467639fffe6e287
 s
 Csrc/main/java/org/store/controller/employee/EmployeeController.java,9\1\919d73005541d0fa401252f1a71ca5ed7ed18eb3
 p
 @src/main/java/org/store/controller/employee/EmployeeService.java,5\5\5545a45761c4b84f004eb862da704657e59e17ac
-z
-Jsrc/main/java/org/store/controller/EmployeeRegistrationFormController.java,f\5\f582074259d97411c47f0b0cc7534cf086f43d4c
-n
->src/main/java/org/store/controller/OrderDetailsController.java,0\5\0542f8586ca899478b55b1e798084e19bee99ec1
 n
 >src/main/java/org/store/controller/SupplierFormController.java,c\2\c2666c81af2241912d55f883825880f96a46d11b
 \
@@ -99,3 +93,5 @@ c
 3src/main/java/org/store/dao/custom/EmployeeDao.java,c\0\c00905526c2c78f44110992d7568814fd1d7374d
 l
 <src/main/java/org/store/dao/custom/impl/EmployeeDaoImpl.java,f\5\f55167f723b24eec15af42741568f16d71a18b3b
+r
+Bsrc/main/java/org/store/controller/OrderDetailsFormController.java,2\9\29f7f99eaf42a3e0df4eeab047e9110163626a6f

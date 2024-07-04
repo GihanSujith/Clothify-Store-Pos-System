@@ -10,6 +10,8 @@ import org.store.entity.Customer;
 import org.store.entity.Employee;
 import org.store.utill.DaoType;
 
+import java.sql.SQLException;
+
 public class EmployeeBoImpl implements EmployeeBo {
 
     private EmployeeDao employeeDao = DaoFactory.getInstance().getDao(DaoType.EMPLOYEE);
